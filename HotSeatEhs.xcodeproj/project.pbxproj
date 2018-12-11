@@ -16,6 +16,9 @@
 		89AA752E21BADED0006FBB07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89AA752C21BADED0006FBB07 /* LaunchScreen.storyboard */; };
 		89AA753921BADED0006FBB07 /* HotSeatEhsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA753821BADED0006FBB07 /* HotSeatEhsTests.swift */; };
 		89AA754421BADED0006FBB07 /* HotSeatEhsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */; };
+		EBFDAAEB21C01EE90028A380 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEA21C01EE90028A380 /* Home.swift */; };
+		EBFDAAED21C020A40028A380 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEC21C020A40028A380 /* Period.swift */; };
+		EBFDAAEF21C021110028A380 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEE21C021110028A380 /* Seat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		89AA753F21BADED0006FBB07 /* HotSeatEhsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSeatEhsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatEhsUITests.swift; sourceTree = "<group>"; };
 		89AA754521BADED0006FBB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBFDAAEA21C01EE90028A380 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		EBFDAAEC21C020A40028A380 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		EBFDAAEE21C021110028A380 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				89AA752321BADECF006FBB07 /* DataViewController.swift */,
 				89AA752521BADECF006FBB07 /* ModelController.swift */,
 				89AA752721BADECF006FBB07 /* Main.storyboard */,
+				EBFDAAEA21C01EE90028A380 /* Home.swift */,
+				EBFDAAEC21C020A40028A380 /* Period.swift */,
+				EBFDAAEE21C021110028A380 /* Seat.swift */,
 				89AA752A21BADED0006FBB07 /* Assets.xcassets */,
 				89AA752C21BADED0006FBB07 /* LaunchScreen.storyboard */,
 				89AA752F21BADED0006FBB07 /* Info.plist */,
@@ -264,7 +273,10 @@
 			files = (
 				89AA752221BADECF006FBB07 /* RootViewController.swift in Sources */,
 				89AA752621BADECF006FBB07 /* ModelController.swift in Sources */,
+				EBFDAAEF21C021110028A380 /* Seat.swift in Sources */,
+				EBFDAAEB21C01EE90028A380 /* Home.swift in Sources */,
 				89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */,
+				EBFDAAED21C020A40028A380 /* Period.swift in Sources */,
 				89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
