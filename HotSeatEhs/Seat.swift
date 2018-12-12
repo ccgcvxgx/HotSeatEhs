@@ -9,4 +9,8 @@
 import UIKit
 
 class Seat: NSObject {
+    //properties
+    var rowPosition: Int!
+    var columnPosition: Int!
+    var studentName: String!
 }

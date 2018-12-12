@@ -9,4 +9,11 @@
 import UIKit
 
 class Period: NSObject {
+//properties
+    var name: String!
+    var rowDimension: Int!
+    var columnDimension: Int!
+    var validSeatingChart: Seat!
+    
+    
 }
