@@ -15,7 +15,7 @@ class Seat: NSObject {
     var studentName: String!
     
     
-    init(_ row: Int, _ column: Int, id: String) {
+    init(_ row: Int, _ column: Int) {
         rowPosition = row
         columnPosition = column
     }
