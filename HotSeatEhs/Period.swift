@@ -18,15 +18,15 @@ class Period: NSObject {
     var rows: [Any] = []
     var colunms: [Any] = []
     
-    
     init(n : String, seats: Int, rows: Int, columns: Int){
         name = n
         numberOfRows = rows
         numberOfColumns = columns
         
-        for _ in stride(from: 1, through: (numberOfRows * numberOfColumns) + 1, by: 1){
-            for colunm in stride(from: 1, through: numberOfColumns + 1, by: 1){
-                    for row in stride(from: 1, through: numberOfRows + 1, by: 1){
+        
+        for _ in stride(from: 1, through: (numberOfRows * numberOfColumns), by: 1){
+            for colunm in stride(from: 0, to: numberOfColumns, by: 1){
+                    for row in stride(from: 1, through: numberOfRows, by: 1){
                         self.seats.append(Seat(row, colunm))
                 }
             }

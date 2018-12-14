@@ -21,7 +21,7 @@ class Seat: NSObject {
     }
     //a function to combine the row and column identifiers to make a seatID
     func id(r: Int, c: Int) -> Int {
-        let id = r + c
+        let id = r + (c * 5)
         return id
     }
 }
