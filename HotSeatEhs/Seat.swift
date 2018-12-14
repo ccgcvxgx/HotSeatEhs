@@ -13,4 +13,15 @@ class Seat: NSObject {
     var rowPosition: Int!
     var columnPosition: Int!
     var studentName: String!
+    
+    
+    init(_ row: Int, _ column: Int, id: String) {
+        rowPosition = row
+        columnPosition = column
+    }
+    //a function to combine the row and column identifiers to make a seatID
+    func id(r: Int, c: Int) -> Int {
+        let id = r + c
+        return id
+    }
 }

@@ -11,9 +11,18 @@ import UIKit
 class Period: NSObject {
 //properties
     var name: String!
+    var seatNumber: Int!
+    var validSeatingChart: Seat!
     var rowDimension: Int!
     var columnDimension: Int!
-    var validSeatingChart: Seat!
     
+    init(n : String, seats: Int, rows: Int, columns: Int){
+        name = n
+        seatNumber = seats
+        rowDimension = rows
+        columnDimension = columns
+    }
     
-}
+    //array that fills the period with seats
+    var fill = [Seat]()
+    }
