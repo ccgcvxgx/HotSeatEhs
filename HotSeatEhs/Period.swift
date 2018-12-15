@@ -18,8 +18,8 @@ class Period: NSObject {
     var rows: [Any] = []
     var colunms: [Any] = []
     
-    init(n : String,rows: Int, columns: Int){
-        name = n
+    init(name : String,rows: Int, columns: Int){
+        self.name = name
         numberOfRows = rows
         numberOfColumns = columns
         
