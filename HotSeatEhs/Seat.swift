@@ -19,7 +19,7 @@ class Seat: NSObject {
         rowPosition = row
         columnPosition = column
     }
-    //a function to combine the row and column identifiers to make a seatID
+    //a function to combine the row and column identifiers to make a seatID. the five represnts the number of rows
     func id(r: Int, c: Int) -> Int {
         let id = r + (c * 5)
         return id
