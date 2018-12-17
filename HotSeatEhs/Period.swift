@@ -7,47 +7,47 @@
 //
 
 import UIKit
-
-class Period: NSObject {
+class Period {
     //properties
     var name: String!
-    var numberOfRows: Int!
-    var numberOfColumns: Int!
-    // arrays to loop though for the slector functions
-    var seats: [Seat] = []
-    var rows: [Any] = []
-    var colunms: [Any] = []
+    var seatNumber: Int!
+    var seatingChart = [[Seat]]()
+    var rowDimension: Int!
+    var columnDimension: Int!
+    var columns = [Seat]()
+    var rows = [Seat]()
     
-    init(name : String,rows: Int, columns: Int){
-        self.name = name
-        numberOfRows = rows
-        numberOfColumns = columns
-        
-        // seats filler
-        for colunm in stride(from: 0, to: numberOfColumns, by: 1){
-            // starts at 0 for the id maker to work
-            for row in stride(from: 1, through: numberOfRows, by: 1){
-                self.seats.append(Seat(row, colunm))
-            }
-        }
-        // rows filler
-        for _ in stride(from: 0, to: numberOfRows * numberOfColumns, by: numberOfColumns){
-            var temp: [Any] = []
-            for x in stride(from: 0, through: numberOfColumns, by: 1){
-                temp.append(self.seats[x])
-            }
-            self.rows.append(contentsOf: temp)
-        }
-        // column filler
-        for _ in stride(from: 0, to: numberOfRows * numberOfColumns, by: numberOfRows){
-            var temp: [Any] = []
-            for x in stride(from: 0, through: numberOfRows, by: 1){
-                temp.append(self.seats[x])
-            }
-            self.colunms.append(contentsOf: temp)
-        }
-        print(self.seats)
-        print(self.rows)
-        print(self.colunms)
+    init(n : String, seats: Int, rows: Int, columns: Int){
+        name = n
+        seatNumber = seats
+        rowDimension = rows
+        columnDimension = columns
     }
+    //function to fill the period object with seats by using a 2D array
+    func fillPeriod(Seats: Seat) -> Array<Any> {
+        for i in 0..<rowDimension{
+            for j in 0..<columnDimension {
+                seatingChart[i][j] = Seat(i, j)
+            }
+        }
+        return seatingChart
+    }
+    //function to make an array for the rows only
+    func fillRows(Seats: Seat) -> Array<Any> {
+        for i in 0..<rowDimension {
+            for j in 0..<columnDimension {
+                rows[i] = Seat(i, j)
+            }
+        }
+        return rows
+    }
+    //function to make an array for the columns only
+    func fillColumns(Seats: Seat) -> Array<Any> {
+        for i in 0..<rowDimension {
+            for j in 0..<columnDimension {
+                columns[j] = Seat(i, j)
+            }
+        }
+        return columns
+}
 }
