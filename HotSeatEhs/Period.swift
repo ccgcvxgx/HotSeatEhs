@@ -17,9 +17,8 @@ class Period {
     var columns = [Seat]()
     var rows = [Seat]()
     
-    init(n : String, seats: Int, rows: Int, columns: Int){
-        name = n
-        seatNumber = seats
+    init(name : String, rows: Int, columns: Int){
+        self.name = name
         rowDimension = rows
         columnDimension = columns
     }
