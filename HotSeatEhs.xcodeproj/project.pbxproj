@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6504DEEB21D6924200B7C040 /* HomePeriods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEEA21D6924200B7C040 /* HomePeriods.swift */; };
+		6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEED21D8200100B7C040 /* EditScreen.swift */; };
+		6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEEF21D8210F00B7C040 /* RunScreen.swift */; };
+		65EE90C721DD22EB00F5C79D /* EditScreenCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE90C621DD22EB00F5C79D /* EditScreenCollectionView.swift */; };
 		89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA751F21BADECF006FBB07 /* AppDelegate.swift */; };
 		89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA752321BADECF006FBB07 /* DataViewController.swift */; };
 		89AA752621BADECF006FBB07 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA752521BADECF006FBB07 /* ModelController.swift */; };
@@ -15,8 +19,7 @@
 		89AA752E21BADED0006FBB07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89AA752C21BADED0006FBB07 /* LaunchScreen.storyboard */; };
 		89AA753921BADED0006FBB07 /* HotSeatEhsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA753821BADED0006FBB07 /* HotSeatEhsTests.swift */; };
 		89AA754421BADED0006FBB07 /* HotSeatEhsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */; };
-		EB84ABFC21D580B500644FF6 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84ABFB21D580B500644FF6 /* HomeScreen.swift */; };
-		EB84ABFE21D580C600644FF6 /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84ABFD21D580C600644FF6 /* HomeScreenCell.swift */; };
+		EB84ABFE21D580C600644FF6 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84ABFD21D580C600644FF6 /* HomeViewCell.swift */; };
 		EB84AC0021D580F100644FF6 /* HomeScreenList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB84ABFF21D580F100644FF6 /* HomeScreenList.swift */; };
 		EBFDAAED21C020A40028A380 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEC21C020A40028A380 /* Period.swift */; };
 		EBFDAAEF21C021110028A380 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEE21C021110028A380 /* Seat.swift */; };
@@ -40,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6504DEEA21D6924200B7C040 /* HomePeriods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePeriods.swift; sourceTree = "<group>"; };
+		6504DEED21D8200100B7C040 /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
+		6504DEEF21D8210F00B7C040 /* RunScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScreen.swift; sourceTree = "<group>"; };
+		65EE90C621DD22EB00F5C79D /* EditScreenCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenCollectionView.swift; sourceTree = "<group>"; };
 		89AA751C21BADECF006FBB07 /* HotSeatEhs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSeatEhs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA751F21BADECF006FBB07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89AA752321BADECF006FBB07 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +61,8 @@
 		89AA753F21BADED0006FBB07 /* HotSeatEhsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSeatEhsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatEhsUITests.swift; sourceTree = "<group>"; };
 		89AA754521BADED0006FBB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EB84ABFB21D580B500644FF6 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
-		EB84ABFD21D580C600644FF6 /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCell.swift; sourceTree = "<group>"; };
-		EB84ABFF21D580F100644FF6 /* HomeScreenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenList.swift; sourceTree = "<group>"; };
+		EB84ABFD21D580C600644FF6 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		EB84ABFF21D580F100644FF6 /* HomeScreenList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenList.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		EBFDAAEC21C020A40028A380 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		EBFDAAEE21C021110028A380 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6504DEEC21D81FD900B7C040 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EB84ABFF21D580F100644FF6 /* HomeScreenList.swift */,
+				EB84ABFD21D580C600644FF6 /* HomeViewCell.swift */,
+				6504DEEA21D6924200B7C040 /* HomePeriods.swift */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
 		89AA751321BADECF006FBB07 = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +125,11 @@
 		89AA751E21BADECF006FBB07 /* HotSeatEhs */ = {
 			isa = PBXGroup;
 			children = (
+				65EE90C621DD22EB00F5C79D /* EditScreenCollectionView.swift */,
 				89AA752721BADECF006FBB07 /* Main.storyboard */,
-				EB84ABFB21D580B500644FF6 /* HomeScreen.swift */,
-				EB84ABFD21D580C600644FF6 /* HomeScreenCell.swift */,
-				EB84ABFF21D580F100644FF6 /* HomeScreenList.swift */,
+				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
+				6504DEED21D8200100B7C040 /* EditScreen.swift */,
+				6504DEEC21D81FD900B7C040 /* Home Screen */,
 				89AA751F21BADECF006FBB07 /* AppDelegate.swift */,
 				89AA752321BADECF006FBB07 /* DataViewController.swift */,
 				89AA752521BADECF006FBB07 /* ModelController.swift */,
@@ -279,11 +296,14 @@
 			files = (
 				89AA752621BADECF006FBB07 /* ModelController.swift in Sources */,
 				EBFDAAEF21C021110028A380 /* Seat.swift in Sources */,
-				EB84ABFC21D580B500644FF6 /* HomeScreen.swift in Sources */,
+				65EE90C721DD22EB00F5C79D /* EditScreenCollectionView.swift in Sources */,
 				89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */,
 				EB84AC0021D580F100644FF6 /* HomeScreenList.swift in Sources */,
+				6504DEEB21D6924200B7C040 /* HomePeriods.swift in Sources */,
+				6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */,
 				EBFDAAED21C020A40028A380 /* Period.swift in Sources */,
-				EB84ABFE21D580C600644FF6 /* HomeScreenCell.swift in Sources */,
+				6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */,
+				EB84ABFE21D580C600644FF6 /* HomeViewCell.swift in Sources */,
 				89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,20 +1,17 @@
-
 //
 //  HomeScreen.swift
 //  HotSeatEhs
 //
-//  Created by Andrea on 12/21/18.
+//  Created by Andrea on 12/28/18.
 //  Copyright © 2018 district196.org. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-class HomeScreen {
+class HomePeriods {
     var periodName: String
     
-    init(periodName: String){
+    init(periodName: String) {
         self.periodName = periodName
     }
-    
 }
-
