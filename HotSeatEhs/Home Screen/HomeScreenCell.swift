@@ -7,13 +7,10 @@
 //
 
 import UIKit
-
+let cellIdentifier = "HomeScreenCell"
 class HomeScreenCell: UITableViewCell {
-    @IBAction func periodButton(_ sender: Any) {
-    }
-    func setHomePeriods(period: HomePeriods) {
-        
-    }
+    
+    @IBOutlet weak var periodName: UIButton!
     
 }
 
