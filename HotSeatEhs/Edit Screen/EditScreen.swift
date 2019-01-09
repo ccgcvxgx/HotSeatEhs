@@ -30,7 +30,7 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let cell1 = EditScreenCollection(cellID: "A1")
         let cell2 = EditScreenCollection(cellID: "A2")
         let cell3 = EditScreenCollection(cellID: "A3")
-        let cell4 = EditScreenCollection(cellID: "A1")
+        let cell4 = EditScreenCollection(cellID: "A4")
         
         collectionCells.append(cell1)
         collectionCells.append(cell2)
@@ -62,8 +62,8 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let table = tableCells[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditScreenTableViewCell", for: indexPath) as! EditScreenTableViewCell
-        //cell.seatID.text? = "A1"
-        // cell.studentName.text? = "Andrea"
+        cell.seatID.text = "A1"
+        cell.studentName.text = "Andrea"
         return cell
             }
     
@@ -74,7 +74,7 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collection = collectionCells[indexPath.row]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditScreenCollectionViewCell", for: indexPath) as! EditScreenCollectionViewCell
-        cell.cellID.text = "A1"
+            cell.cellID.text = "A1"
         return cell
     }
 }
