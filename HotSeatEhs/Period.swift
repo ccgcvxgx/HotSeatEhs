@@ -26,7 +26,7 @@ class Period {
     func fillPeriod(Seats: Seat) -> Array<Any> {
         for i in 0..<rowDimension{
             for j in 0..<columnDimension {
-                seatingChart[i][j] = Seat(i, j)
+                seatingChart[i][j] = Seat(r: i, c: j, studentName: "")
             }
         }
         return seatingChart
@@ -35,7 +35,7 @@ class Period {
     func fillRows(Seats: Seat) -> Array<Any> {
         for i in 0..<rowDimension {
             for j in 0..<columnDimension {
-                rows[i] = Seat(i, j)
+                rows[i] = Seat(r: i, c: j, studentName: "")
             }
         }
         return rows
@@ -44,7 +44,7 @@ class Period {
     func fillColumns(Seats: Seat) -> Array<Any> {
         for i in 0..<rowDimension {
             for j in 0..<columnDimension {
-                columns[j] = Seat(i, j)
+                columns[j] = Seat(r: i, c: j, studentName: "")
             }
         }
         return columns

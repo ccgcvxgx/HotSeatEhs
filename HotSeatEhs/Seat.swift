@@ -10,15 +10,13 @@ import UIKit
 
 class Seat: NSObject {
     //properties
-    var rowPosition: Int!
-    var columnPosition: Int!
-    var studentName: String!
-    var id: String!
+    var r: Int!
+    var c: Int!
+    var studentName: String?
     
-    init(_ row: Int, _ column: Int) {
-        rowPosition = row
-        columnPosition = column
-        id = String(row) + String(column)
-        studentName = id
+    init(r: Int, c: Int , studentName: String?){
+        self.r = r
+        self.c = c
+        self.studentName = studentName
     }
 }
