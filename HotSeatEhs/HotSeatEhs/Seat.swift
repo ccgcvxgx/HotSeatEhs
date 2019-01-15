@@ -13,15 +13,12 @@ class Seat: NSObject {
     var rowPosition: Int!
     var columnPosition: Int!
     var studentName: String!
-    
+    var id: String!
     
     init(_ row: Int, _ column: Int) {
         rowPosition = row
         columnPosition = column
-    }
-    //a function to combine the row and column identifiers to make a seatID. the five represnts the number of rows
-    func id(r: Int, c: Int) -> Int {
-        let id = r + (c * 5)
-        return id
+        id = String(row) + String(column)
+        studentName = id
     }
 }

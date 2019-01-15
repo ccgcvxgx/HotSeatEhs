@@ -1,5 +1,5 @@
 //
-//  RunScreen.swift
+//  EditScreen.swift
 //  HotSeatEhs
 //
 //  Created by Andrea on 12/29/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RunScreen: UIViewController {
+class EditScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
