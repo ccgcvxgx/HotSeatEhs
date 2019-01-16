@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEED21D8200100B7C040 /* EditScreen.swift */; };
 		6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEEF21D8210F00B7C040 /* RunScreen.swift */; };
-		65EE90C721DD22EB00F5C79D /* EditScreenCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EE90C621DD22EB00F5C79D /* EditScreenCollectionView.swift */; };
+		6554AA0821DFC51300C9EC64 /* EditScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */; };
+		6554AA0E21DFC66000C9EC64 /* EditScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */; };
+		6554AA1021E007A700C9EC64 /* EditSreenTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0F21E007A700C9EC64 /* EditSreenTable.swift */; };
+		6554AA1221E00A7200C9EC64 /* EditScreenCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA1121E00A7200C9EC64 /* EditScreenCollection.swift */; };
 		89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA751F21BADECF006FBB07 /* AppDelegate.swift */; };
 		89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA752321BADECF006FBB07 /* DataViewController.swift */; };
 		89AA752621BADECF006FBB07 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA752521BADECF006FBB07 /* ModelController.swift */; };
@@ -18,9 +21,9 @@
 		89AA752E21BADED0006FBB07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89AA752C21BADED0006FBB07 /* LaunchScreen.storyboard */; };
 		89AA753921BADED0006FBB07 /* HotSeatEhsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA753821BADED0006FBB07 /* HotSeatEhsTests.swift */; };
 		89AA754421BADED0006FBB07 /* HotSeatEhsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */; };
-		9661345121E16DC8008927C4 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661345021E16DC8008927C4 /* HomeTableViewCell.swift */; };
-		9661345321E16DD9008927C4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661345221E16DD9008927C4 /* HomeTableViewController.swift */; };
-		9661345921E1723E008927C4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9661345821E1723E008927C4 /* HomeViewController.swift */; };
+		96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A5F21E8222700D304D7 /* HomeViewController.swift */; };
+		96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */; };
+		96571A6621E824DE00D304D7 /* Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6521E824DE00D304D7 /* Selectors.swift */; };
 		EBFDAAED21C020A40028A380 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEC21C020A40028A380 /* Period.swift */; };
 		EBFDAAEF21C021110028A380 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEE21C021110028A380 /* Seat.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +48,10 @@
 /* Begin PBXFileReference section */
 		6504DEED21D8200100B7C040 /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
 		6504DEEF21D8210F00B7C040 /* RunScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScreen.swift; sourceTree = "<group>"; };
-		65EE90C621DD22EB00F5C79D /* EditScreenCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenCollectionView.swift; sourceTree = "<group>"; };
+		6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenCollectionViewCell.swift; sourceTree = "<group>"; };
+		6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenTableViewCell.swift; sourceTree = "<group>"; };
+		6554AA0F21E007A700C9EC64 /* EditSreenTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSreenTable.swift; sourceTree = "<group>"; };
+		6554AA1121E00A7200C9EC64 /* EditScreenCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenCollection.swift; sourceTree = "<group>"; };
 		89AA751C21BADECF006FBB07 /* HotSeatEhs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSeatEhs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA751F21BADECF006FBB07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89AA752321BADECF006FBB07 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
@@ -60,9 +66,9 @@
 		89AA753F21BADED0006FBB07 /* HotSeatEhsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSeatEhsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatEhsUITests.swift; sourceTree = "<group>"; };
 		89AA754521BADED0006FBB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9661345021E16DC8008927C4 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		9661345221E16DD9008927C4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
-		9661345821E1723E008927C4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		96571A5F21E8222700D304D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		96571A6521E824DE00D304D7 /* Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectors.swift; sourceTree = "<group>"; };
 		EBFDAAEC21C020A40028A380 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		EBFDAAEE21C021110028A380 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +98,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6504DEEC21D81FD900B7C040 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				96571A5F21E8222700D304D7 /* HomeViewController.swift */,
+				96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		6554AA0621DFC4E700C9EC64 /* Edit Screen */ = {
+			isa = PBXGroup;
+			children = (
+				6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */,
+				6554AA1121E00A7200C9EC64 /* EditScreenCollection.swift */,
+				6504DEED21D8200100B7C040 /* EditScreen.swift */,
+				6554AA0F21E007A700C9EC64 /* EditSreenTable.swift */,
+				6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */,
+			);
+			path = "Edit Screen";
+			sourceTree = "<group>";
+		};
 		89AA751321BADECF006FBB07 = {
 			isa = PBXGroup;
 			children = (
@@ -115,13 +142,11 @@
 		89AA751E21BADECF006FBB07 /* HotSeatEhs */ = {
 			isa = PBXGroup;
 			children = (
-				65EE90C621DD22EB00F5C79D /* EditScreenCollectionView.swift */,
 				89AA752721BADECF006FBB07 /* Main.storyboard */,
-				9661345021E16DC8008927C4 /* HomeTableViewCell.swift */,
-				9661345221E16DD9008927C4 /* HomeTableViewController.swift */,
-				9661345821E1723E008927C4 /* HomeViewController.swift */,
 				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
-				6504DEED21D8200100B7C040 /* EditScreen.swift */,
+				96571A6521E824DE00D304D7 /* Selectors.swift */,
+				6554AA0621DFC4E700C9EC64 /* Edit Screen */,
+				6504DEEC21D81FD900B7C040 /* Home Screen */,
 				89AA751F21BADECF006FBB07 /* AppDelegate.swift */,
 				89AA752321BADECF006FBB07 /* DataViewController.swift */,
 				89AA752521BADECF006FBB07 /* ModelController.swift */,
@@ -286,17 +311,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6554AA0821DFC51300C9EC64 /* EditScreenCollectionViewCell.swift in Sources */,
 				89AA752621BADECF006FBB07 /* ModelController.swift in Sources */,
+				96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */,
 				EBFDAAEF21C021110028A380 /* Seat.swift in Sources */,
-				65EE90C721DD22EB00F5C79D /* EditScreenCollectionView.swift in Sources */,
+				6554AA1021E007A700C9EC64 /* EditSreenTable.swift in Sources */,
 				89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */,
-				9661345321E16DD9008927C4 /* HomeTableViewController.swift in Sources */,
+				6554AA1221E00A7200C9EC64 /* EditScreenCollection.swift in Sources */,
 				6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */,
+				96571A6621E824DE00D304D7 /* Selectors.swift in Sources */,
 				EBFDAAED21C020A40028A380 /* Period.swift in Sources */,
-				9661345121E16DC8008927C4 /* HomeTableViewCell.swift in Sources */,
+				6554AA0E21DFC66000C9EC64 /* EditScreenTableViewCell.swift in Sources */,
 				6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */,
+				96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */,
 				89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */,
-				9661345921E1723E008927C4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
