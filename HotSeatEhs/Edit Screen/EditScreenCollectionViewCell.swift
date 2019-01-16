@@ -8,6 +8,8 @@
 
 import UIKit
 
+let editCellIdentifier = "EditScreenCollectionViewCell"
+
 class EditScreenCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var cellID: UILabel!

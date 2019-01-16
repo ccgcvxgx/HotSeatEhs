@@ -13,19 +13,28 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var TableView: UITableView!
     
-    var collectionCells: [EditScreenCollection] = []
-    var tableCells: [EditScreenTable] = []
+    var collectionCells: [Seat] = []
+    var tableCells: [Seat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionCells = collectionArr()
-        tableCells = tableArr()
-        
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    private func makeclasses() -> [Period]{
+        let p1 = Period(name:"One",rows: 5, columns: 7)
+        let p2 = Period(name:"Two",rows: 5, columns: 7)
+        let p3 = Period(name:"Three",rows: 5, columns: 7)
         
+        
+        
+        return [p1,p2,p3]
+    }
+    /*
         func collectionArr() -> [EditScreenCollection] {
         let cell1 = EditScreenCollection(cellID: "A1")
         let cell2 = EditScreenCollection(cellID: "A2")
@@ -54,16 +63,20 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         
         return tableCells
     }
+    */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableCells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let table = tableCells[indexPath.row]
+        let table = Period(name:"One",rows: 5, columns: 7)
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditScreenTableViewCell", for: indexPath) as! EditScreenTableViewCell
+        
         cell.seatID.text = "A1"
         cell.studentName.text = "Andrea"
+        cell.textLabel?.text = table.seatingChart[indexPath.row].studentName
+        
         return cell
             }
     
@@ -72,9 +85,11 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let collection = collectionCells[indexPath.row]
+        let collection = Period(name:"One",rows: 5, columns: 7)
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditScreenCollectionViewCell", for: indexPath) as! EditScreenCollectionViewCell
-            cell.cellID.text = "A1"
+        
+           cell.cellID.text = collection.seatingChart[indexPath.row].studentName
+        
         return cell
     }
 }

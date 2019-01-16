@@ -7,46 +7,50 @@
 //
 
 import UIKit
+
 class Period {
+    
     //properties
     var name: String!
-    var seatNumber: Int!
-    var seatingChart = [[Seat]]()
+    var seatingChart = [Seat]()
     var rowDimension: Int!
     var columnDimension: Int!
-    var columns = [Seat]()
-    var rows = [Seat]()
+    var columns = [Int:[Any]]()
+    var rows = [Int:[Any]]()
     
-    init(name : String, rows: Int, columns: Int){
-        self.name = name
-        rowDimension = rows
-        columnDimension = columns
-    }
-    //function to fill the period object with seats by using a 2D array
-    func fillPeriod(Seats: Seat) -> Array<Any> {
+    init(name: String, rows: Int, columns: Int){
+            self.name = name
+            rowDimension = rows
+            columnDimension = columns
+            let seatCount = rowDimension * columnDimension
+            seatingChart = [Seat](repeating: Seat(10,8), count: seatCount)
+            fillArrays()
+        }
+    
+    
+    private func fillArrays(){
+        
         for i in 0..<rowDimension{
-            for j in 0..<columnDimension {
-                seatingChart[i][j] = Seat(i, j)
+            for j in 0..<columnDimension{
+                let seat = Seat(i,j)
+                seatingChart[i] = seat
             }
         }
-        return seatingChart
+ 
+        for i in 0..<rowDimension{
+            var temp = [Seat]()
+            for j in 0..<columnDimension{
+                temp.append(Seat(i,j))
+            }
+            rows[i] = temp
+        }
+        
+        for j in 0..<columnDimension{
+            var temp = [Seat]()
+            for i in 0..<rowDimension{
+                temp.append(Seat(i,j))
+            }
+            columns[j] = temp
+        }
     }
-    //function to make an array for the rows only
-    func fillRows(Seats: Seat) -> Array<Any> {
-        for i in 0..<rowDimension {
-            for j in 0..<columnDimension {
-                rows[i] = Seat(i, j)
-            }
-        }
-        return rows
-    }
-    //function to make an array for the columns only
-    func fillColumns(Seats: Seat) -> Array<Any> {
-        for i in 0..<rowDimension {
-            for j in 0..<columnDimension {
-                columns[j] = Seat(i, j)
-            }
-        }
-        return columns
-}
 }

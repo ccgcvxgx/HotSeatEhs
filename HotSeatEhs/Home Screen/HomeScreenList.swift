@@ -8,9 +8,9 @@
 
 import UIKit
 
-class HomeScreenList: UIViewController{
-    var periods: [HomePeriods] = []
+class HomeScreenList: UIViewController {
     
+    var periods: [HomePeriods] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,5 +32,16 @@ class HomeScreenList: UIViewController{
     }
 
     
+}
+extension HomeScreenList: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return periods.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let p = periods[indexPath.row]
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeScreenCell") as! HomeScreenCell
+        return cell
+    }
 }
 
