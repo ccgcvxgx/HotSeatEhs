@@ -47,7 +47,6 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="Edit:" destination="PvE-8i-meg" eventType="touchUpInside" id="TgS-cA-aYJ"/>
-                                                        <segue destination="0qv-fa-BLY" kind="show" id="mFs-vX-8Ke"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qVZ-ky-r9v">
@@ -65,6 +64,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="delete:" destination="PvE-8i-meg" eventType="touchUpInside" id="KEP-ib-yvN"/>
+                                                        <action selector="deleteAction:" destination="PvE-8i-meg" eventType="touchUpInside" id="Xfc-wf-cED"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -83,7 +83,8 @@
                                             <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                         </accessibility>
                                         <connections>
-                                            <segue destination="5Dq-pP-aOQ" kind="show" id="8Ny-ah-kGv"/>
+                                            <outlet property="classOpener" destination="itn-Vn-oxC" id="gcg-Hm-S4S"/>
+                                            <outlet property="editButton" destination="VTA-20-3Kf" id="3g8-kg-M1p"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -143,13 +144,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-Vf-dLe">
-                                <rect key="frame" x="417.5" y="100" width="277" height="40"/>
+                                <rect key="frame" x="417.5" y="50" width="277" height="40"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-ua-jXK">
-                                <rect key="frame" x="0.0" y="210" width="550.5" height="554"/>
+                                <rect key="frame" x="0.0" y="160" width="600" height="604"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cN6-ua-jXK" secondAttribute="height" multiplier="150:151" id="cku-od-gjc"/>
@@ -191,14 +192,14 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2OC-fk-A9R">
-                                <rect key="frame" x="550.5" y="210" width="561.5" height="554"/>
+                                <rect key="frame" x="600" y="160" width="512" height="604"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditScreenTableViewCell" rowHeight="120" id="DXO-HD-uwF" customClass="EditScreenTableViewCell" customModule="HotSeatEhs" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="561.5" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="512" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXO-HD-uwF" id="6G9-d2-6eS">
-                                            <rect key="frame" x="0.0" y="0.0" width="561.5" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="512" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-E5-Y5l">
@@ -269,7 +270,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RZs-aP-UPQ">
-                                <rect key="frame" x="324" y="212.5" width="548" height="499.5"/>
+                                <rect key="frame" x="269.5" y="162.5" width="602.5" height="549.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RZs-aP-UPQ" secondAttribute="height" multiplier="600:547" id="8vH-gs-6av"/>
@@ -291,7 +292,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bKM-hZ-DGH">
-                                    <rect key="frame" x="0.0" y="0.0" width="548" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="602.5" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>
@@ -300,37 +301,37 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-4q-3l5">
-                                <rect key="frame" x="231" y="586" width="68" height="17"/>
+                                <rect key="frame" x="231" y="586" width="13.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHI-k8-CKZ">
-                                <rect key="frame" x="231" y="499" width="68" height="17"/>
+                                <rect key="frame" x="231" y="499" width="13.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCM-bb-XuN">
-                                <rect key="frame" x="231" y="412" width="68" height="17"/>
+                                <rect key="frame" x="231" y="412" width="13.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xR-AF-j2e">
-                                <rect key="frame" x="231" y="325" width="68" height="17"/>
+                                <rect key="frame" x="231" y="325" width="13.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpk-8Q-NZb">
-                                <rect key="frame" x="231" y="238" width="68" height="17"/>
+                                <rect key="frame" x="231" y="238" width="13.5" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QM-PE-t6f">
-                                <rect key="frame" x="296" y="170.5" width="14" height="17"/>
+                                <rect key="frame" x="296" y="120.5" width="14" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6QM-PE-t6f" secondAttribute="height" multiplier="14:17" id="ahH-Rh-lHL"/>
                                 </constraints>
@@ -339,7 +340,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6g-zj-koF">
-                                <rect key="frame" x="385" y="170.5" width="13" height="17"/>
+                                <rect key="frame" x="385" y="120.5" width="13" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="f6g-zj-koF" secondAttribute="height" multiplier="13:17" id="weo-sg-B0V"/>
                                 </constraints>
@@ -348,7 +349,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGH-ba-DSn">
-                                <rect key="frame" x="473" y="170.5" width="14" height="17"/>
+                                <rect key="frame" x="473" y="120.5" width="14" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="RGH-ba-DSn" secondAttribute="height" multiplier="14:17" id="1XY-sH-Ww7"/>
                                 </constraints>
@@ -357,7 +358,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrN-74-2ZG">
-                                <rect key="frame" x="562" y="170.5" width="14" height="17"/>
+                                <rect key="frame" x="562" y="120.5" width="14" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="yrN-74-2ZG" secondAttribute="height" multiplier="14:17" id="0ur-Bk-92r"/>
                                 </constraints>
@@ -366,7 +367,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMN-fj-hJE">
-                                <rect key="frame" x="651" y="170.5" width="12" height="17"/>
+                                <rect key="frame" x="651" y="120.5" width="12" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="FMN-fj-hJE" secondAttribute="height" multiplier="12:17" id="c4n-6g-Q8s"/>
                                 </constraints>
@@ -375,7 +376,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wV1-hW-zwF">
-                                <rect key="frame" x="738" y="170.5" width="11" height="17"/>
+                                <rect key="frame" x="738" y="120.5" width="11" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wV1-hW-zwF" secondAttribute="height" multiplier="11:17" id="GrL-ul-RVx"/>
                                 </constraints>
@@ -384,13 +385,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAb-cM-m50">
-                                <rect key="frame" x="824" y="170.5" width="14" height="17"/>
+                                <rect key="frame" x="824" y="120.5" width="14" height="17"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uLR-fG-HJT">
-                                <rect key="frame" x="933.5" y="85" width="158.5" height="37"/>
+                                <rect key="frame" x="933.5" y="35" width="158.5" height="37"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uLR-fG-HJT" secondAttribute="height" multiplier="197:46" id="R93-XK-3zb"/>
@@ -401,7 +402,7 @@
                                 </state>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Period Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8yu-Ak-qUZ">
-                                <rect key="frame" x="20" y="85" width="264" height="40"/>
+                                <rect key="frame" x="20" y="35" width="264" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="35"/>

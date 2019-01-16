@@ -61,7 +61,9 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         let period = classes[indexPath.row]
         cell.textLabel?.text = period.name
         
+        
         return cell
     }
+    
     
 }
