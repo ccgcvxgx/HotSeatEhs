@@ -26,6 +26,13 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         classes.append(contentsOf: [p1,p2,p3,p4,p5,p6,p7])
     }
     
+    
+    @IBAction func editButton(_ sender: Any) {
+        performSegue(withIdentifier: "HomeEdit", sender: self)
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         makeclasses()

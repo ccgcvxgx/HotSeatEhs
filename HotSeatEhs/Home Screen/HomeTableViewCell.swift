@@ -12,10 +12,11 @@ let homeCellIdentifier = "HomeTableViewCell"
 
 class HomeTableViewCell: UITableViewCell {
     
-    @IBAction func editPeriod(_ sender: Any) {
-    }
-    @IBAction func deletePeriod(_ sender: Any) {
-    }
+    
+    //@IBAction func EditClasss(_ sender: Any) {
+    //    HomeViewController.performSegue(EditScreen)
+    //}
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
