@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -30,7 +30,6 @@ class HomeViewController: UIViewController, UITableViewDataSource {
     @IBAction func editButton(_ sender: Any) {
         performSegue(withIdentifier: "HomeEdit", sender: self)
     }
-    
     
     
     override func viewDidLoad() {
@@ -58,7 +57,6 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         return classes.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: homeCellIdentifier, for: indexPath) as? HomeTableViewCell  else {
             fatalError("The dequeued cell is not an instance of HomeTableViewCell.")
@@ -67,8 +65,11 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         // Configure the cell...
         let period = classes[indexPath.row]
         cell.textLabel?.text = period.name
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        performSegue(withIdentifier: "HomeRun", sender: self)
     }
     
 }

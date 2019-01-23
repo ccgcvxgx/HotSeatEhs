@@ -125,7 +125,7 @@
                     <connections>
                         <outlet property="tableView" destination="JnC-9X-Epb" id="MdS-8N-t5Z"/>
                         <segue destination="0qv-fa-BLY" kind="presentation" identifier="HomeEdit" id="TQw-mF-KbL"/>
-                        <segue destination="5Dq-pP-aOQ" kind="presentation" id="8J3-eq-F4u"/>
+                        <segue destination="5Dq-pP-aOQ" kind="presentation" identifier="HomeRun" id="8J3-eq-F4u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pig-18-J9I" userLabel="First Responder" sceneMemberID="firstResponder"/>

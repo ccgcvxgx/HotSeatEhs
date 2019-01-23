@@ -12,15 +12,11 @@ let homeCellIdentifier = "HomeTableViewCell"
 
 class HomeTableViewCell: UITableViewCell {
     
-    
-    //@IBAction func EditClasss(_ sender: Any) {
-    //    HomeViewController.performSegue(EditScreen)
-    //}
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
+    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
