@@ -31,6 +31,31 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         performSegue(withIdentifier: "HomeEdit", sender: self)
     }
     
+    @IBAction func addPeriod(_ sender: Any) {
+      //  classes.append(Period(name:"eight",rows: 5, columns: 7))
+      //  insertRows(indexPaths: [IndexPath], animation: UITableView.RowAnimation)
+      //  reloadData()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            self.classes.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            print(self.classes)
+        }
+        
+        //let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
+        //    performSegue(withIdentifier: "HomeEdit", sender: self)
+        //}
+        
+        //edit.backgroundColor = UIColor.lightGray
+        
+        return [delete]
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +94,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-        performSegue(withIdentifier: "HomeRun", sender: self)
+ //       performSegue(withIdentifier: "HomeRun", sender: self)
     }
-    
 }
