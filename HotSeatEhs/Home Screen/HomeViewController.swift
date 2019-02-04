@@ -13,29 +13,25 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     var classes = [Period]()
-    
-    private func makeclasses(){
-        let p1 = Period(name:"One",rows: 5, columns: 7)
-        let p2 = Period(name:"Two",rows: 5, columns: 7)
-        let p3 = Period(name:"Three",rows: 5, columns: 7)
-        let p4 = Period(name:"Four",rows: 5, columns: 7)
-        let p5 = Period(name:"Five",rows: 5, columns: 7)
-        let p6 = Period(name:"Six",rows: 5, columns: 7)
-        let p7 = Period(name:"Seven",rows: 5, columns: 7)
-        
-        classes.append(contentsOf: [p1,p2,p3,p4,p5,p6,p7])
-    }
-    
-    
+
     @IBAction func editButton(_ sender: Any) {
         performSegue(withIdentifier: "HomeEdit", sender: self)
     }
     
     @IBAction func addPeriod(_ sender: Any) {
-      //  classes.append(Period(name:"eight",rows: 5, columns: 7))
-      //  insertRows(indexPaths: [IndexPath], animation: UITableView.RowAnimation)
-      //  reloadData()
-        
+
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let popup = segue.destination as! PopUpVC
+        popup.onAdd = onAdd
+    }
+    func onAdd(_ n: UITextField, _ r: UITextField, _ c: UITextField) -> Void {
+        let names =  n.text!
+        let row = Int(r.text!)
+        let col = Int(c.text!)
+        classes.append(Period(name: names, rows: row!, columns: col!))
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -59,7 +55,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeclasses()
         tableView.dataSource = self
         
         // Uncomment the following line to preserve selection between presentations
