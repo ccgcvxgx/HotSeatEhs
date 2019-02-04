@@ -19,38 +19,21 @@ class Period {
     var rows = [Int:[Any]]()
     
     init(name: String, rows: Int, columns: Int){
-            self.name = name
-            rowDimension = rows
-            columnDimension = columns
-            let seatCount = rowDimension * columnDimension
-            seatingChart = [Seat](repeating: Seat(10,8), count: seatCount)
-            fillArrays()
-        }
-    
-    
-    private func fillArrays(){
-        
-        for i in 0..<rowDimension{
-            for j in 0..<columnDimension{
-                let seat = Seat(i,j)
-                seatingChart[i] = seat
+        self.name = name
+        rowDimension = rows
+        columnDimension = columns
+        let seatCount = rowDimension * columnDimension
+        seatingChart = [Seat](repeating: Seat(10,8), count: seatCount)
+    }
+    func fillPeriod() -> [Seat]{
+        var fillPeriod = [Seat]()
+        for i in 0..<columnDimension{
+            for j in 0..<rowDimension{
+                let s = Seat(i, j)
+                fillPeriod.append(s)
             }
         }
- 
-        for i in 0..<rowDimension{
-            var temp = [Seat]()
-            for j in 0..<columnDimension{
-                temp.append(Seat(i,j))
-            }
-            rows[i] = temp
-        }
-        
-        for j in 0..<columnDimension{
-            var temp = [Seat]()
-            for i in 0..<rowDimension{
-                temp.append(Seat(i,j))
-            }
-            columns[j] = temp
-        }
+        return fillPeriod
     }
 }
+
