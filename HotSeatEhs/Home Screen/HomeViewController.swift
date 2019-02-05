@@ -30,7 +30,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let names =  n.text!
         let row = Int(r.text!)
         let col = Int(c.text!)
-        classes.append(Period(name: names, rows: row!, columns: col!))
+        list.append(Period(name: names, rows: row!, columns: col!))
+        ClassArray().archive(fileName: "HomeScreen")
         tableView.reloadData()
     }
     
@@ -38,9 +39,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             // delete item at indexPath
-            self.classes.remove(at: indexPath.row)
+            list.remove(at: indexPath.row)
+            ClassArray().archive(fileName: "HomeScreen")
             tableView.deleteRows(at: [indexPath], with: .fade)
-            print(self.classes)
+            tableView.reloadData()
+            print(list)
         }
         
         //let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
@@ -55,6 +58,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ClassArray().restore(fileName: "HomeScreen")
         tableView.dataSource = self
         
         // Uncomment the following line to preserve selection between presentations
@@ -74,16 +78,17 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return classes.count
+        
+        return list.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: homeCellIdentifier, for: indexPath) as? HomeTableViewCell  else {
             fatalError("The dequeued cell is not an instance of HomeTableViewCell.")
         }
-        
+        ClassArray().restore(fileName: "HomeScreen")
         // Configure the cell...
-        let period = classes[indexPath.row]
+        let period = list[indexPath.row]
         cell.textLabel?.text = period.name
         return cell
     }
