@@ -18,10 +18,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         performSegue(withIdentifier: "HomeEdit", sender: self)
     }
     
-    @IBAction func addPeriod(_ sender: Any) {
-
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let popup = segue.destination as! PopUpVC
         popup.onAdd = onAdd
@@ -58,7 +54,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ClassArray().restore(fileName: "HomeScreen")
         tableView.dataSource = self
         
         // Uncomment the following line to preserve selection between presentations
@@ -78,7 +73,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        
+        ClassArray().restore(fileName: "HomeScreen")
         return list.count
     }
     
@@ -86,7 +81,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         guard let cell = tableView.dequeueReusableCell(withIdentifier: homeCellIdentifier, for: indexPath) as? HomeTableViewCell  else {
             fatalError("The dequeued cell is not an instance of HomeTableViewCell.")
         }
-        ClassArray().restore(fileName: "HomeScreen")
         // Configure the cell...
         let period = list[indexPath.row]
         cell.textLabel?.text = period.name

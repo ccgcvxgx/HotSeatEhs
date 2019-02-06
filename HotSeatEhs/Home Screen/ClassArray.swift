@@ -21,13 +21,11 @@ var list = [
 
 class ClassArray: NSObject, Codable {
     
-    
+    var calsses = list
     override init() {
         super.init()
-        calsses = list
     }
     
-    var calsses = list
     
     private enum CodingKeys: CodingKey{
         case calsses
