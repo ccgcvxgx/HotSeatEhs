@@ -25,10 +25,12 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let names =  n.text!
         let row = Int(r.text!)
         let col = Int(c.text!)
-        list.append(Period(name: names, rows: row!, columns: col!))
-        ClassArray().archive(fileName: "HomeScreen")
+        let p = Period(name: names, rows: row!, columns: col!)
+        list.append(p)
+        ClassArray().archive(fileName: "HomeScreen");
         tableView.reloadData()
     }
+
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         

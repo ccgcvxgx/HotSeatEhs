@@ -7,53 +7,42 @@
 //
 import UIKit
 
-class Period: Codable {
+class Period: NSObject, Codable {
     
     //properties
     var name: String!
-    var seatingChart: [Seat]
     var rowDimension: Int!
     var columnDimension: Int!
-    var columns =  [Int:[Any]]()
-    var rows = [Int:[Any]]()
+    var seatingChart = [Seat]()
     
     init(name: String, rows: Int, columns: Int){
         self.name = name
         rowDimension = rows
         columnDimension = columns
-        let seatCount = rowDimension * columnDimension
-        seatingChart = [Seat](repeating: Seat(10,8), count: seatCount)
-        //columns = [0: [Seat(10,8)]]
-        //rows = [0: [Seat(10,8)]]
-        fillArrays()
+        super.init()
+        fillPeriod()
     }
     
-    
-    func fillArrays(){
-        
+    func fillPeriod() {
         for i in 0..<rowDimension{
             for j in 0..<columnDimension{
                 let seat = Seat(i,j)
-                seatingChart[i] = seat
+                seatingChart.append(seat)
             }
-        }
-        
-        for i in 0..<rowDimension{
-            var temp = [Seat]()
-            for j in 0..<columnDimension{
-                temp.append(Seat(i,j))
-            }
-            rows[i] = temp
-        }
-        
-        for j in 0..<columnDimension{
-            var temp = [Seat]()
-            for i in 0..<rowDimension{
-                temp.append(Seat(i,j))
-            }
-            columns[j] = temp
         }
     }
+    
+    func fill(p: Period) -> [Seat] {
+        for i in 0..<rowDimension{
+            for j in 0..<columnDimension{
+                let seat = Seat(i,j)
+                seatingChart.append(seat)
+            }
+        }
+        var chart = seatingChart
+        return chart
+    }
+    
     
     private enum CodingKeys: CodingKey{
         case name
@@ -73,11 +62,6 @@ class Period: Codable {
         name = try values.decode(String.self, forKey: .name)
         rowDimension = try values.decode(Int.self, forKey: .rowDimension)
         columnDimension = try values.decode(Int.self, forKey: .columnDimension)
-        self.columns = [0: [Seat(10,8)]]
-        self.rows = [0: [Seat(10,8)]]
-        let seatCount = rowDimension * columnDimension
-        seatingChart = [Seat](repeating: Seat(10,8), count: seatCount)
-        fillArrays()
     }
     
     
@@ -122,3 +106,4 @@ class Period: Codable {
     }
     
 }
+
