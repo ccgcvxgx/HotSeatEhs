@@ -38,7 +38,7 @@ class ClassArray: NSObject, Codable {
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        list = try values.decode([Period].self, forKey: .calsses)
+        calsses = try values.decode([Period].self, forKey: .calsses)
     }
     
     func archive(fileName: String) {

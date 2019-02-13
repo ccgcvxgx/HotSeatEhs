@@ -11,17 +11,16 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var classes = [Period]()
 
-    @IBAction func editButton(_ sender: Any) {
-        performSegue(withIdentifier: "HomeEdit", sender: self)
+    
+    @IBAction func addPeriod(_ sender: Any) {
+        let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpVC
+        self.addChild(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParent: self)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let popup = segue.destination as! PopUpVC
-        popup.onAdd = onAdd
-    }
     func onAdd(_ n: UITextField, _ r: UITextField, _ c: UITextField) -> Void {
         let names =  n.text!
         let row = Int(r.text!)
@@ -42,18 +41,28 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print(list)
         }
         
-        //let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
-        //    performSegue(withIdentifier: "HomeEdit", sender: self)
-        //}
+        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
+           self.performSegue(withIdentifier: "HomeRun", sender: self)
+            
+            
+        }
+        /*
+        let edit = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+            // delete item at indexPath
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
+        }
+ */
         
-        //edit.backgroundColor = UIColor.lightGray
+        edit.backgroundColor = UIColor.lightGray
         
-        return [delete]
+        return [delete,edit]
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ClassArray().restore(fileName: "HomeScreen")
         tableView.dataSource = self
         
         // Uncomment the following line to preserve selection between presentations
@@ -73,7 +82,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        ClassArray().restore(fileName: "HomeScreen")
         return list.count
     }
     
@@ -85,9 +93,5 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let period = list[indexPath.row]
         cell.textLabel?.text = period.name
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
- //       performSegue(withIdentifier: "HomeRun", sender: self)
     }
 }
