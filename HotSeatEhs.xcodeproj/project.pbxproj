@@ -26,6 +26,7 @@
 		96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A5F21E8222700D304D7 /* HomeViewController.swift */; };
 		96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */; };
 		96571A6621E824DE00D304D7 /* Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6521E824DE00D304D7 /* Selectors.swift */; };
+		EB07213D2215D45000DDA6AF /* RunPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07213C2215D45000DDA6AF /* RunPopUpViewController.swift */; };
 		EBFDAAED21C020A40028A380 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEC21C020A40028A380 /* Period.swift */; };
 		EBFDAAEF21C021110028A380 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEE21C021110028A380 /* Seat.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		96571A5F21E8222700D304D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		96571A6521E824DE00D304D7 /* Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectors.swift; sourceTree = "<group>"; };
+		EB07213C2215D45000DDA6AF /* RunPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPopUpViewController.swift; sourceTree = "<group>"; };
 		EBFDAAEC21C020A40028A380 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		EBFDAAEE21C021110028A380 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			children = (
 				89AA752721BADECF006FBB07 /* Main.storyboard */,
 				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
+				EB07213C2215D45000DDA6AF /* RunPopUpViewController.swift */,
 				96571A6521E824DE00D304D7 /* Selectors.swift */,
 				6554AA0621DFC4E700C9EC64 /* Edit Screen */,
 				6504DEEC21D81FD900B7C040 /* Home Screen */,
@@ -321,6 +324,7 @@
 				89AA752621BADECF006FBB07 /* ModelController.swift in Sources */,
 				96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */,
 				EBFDAAEF21C021110028A380 /* Seat.swift in Sources */,
+				EB07213D2215D45000DDA6AF /* RunPopUpViewController.swift in Sources */,
 				6554AA1021E007A700C9EC64 /* EditSreenTable.swift in Sources */,
 				896350D12209F25700C5EAF8 /* ClassArray.swift in Sources */,
 				89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */,
