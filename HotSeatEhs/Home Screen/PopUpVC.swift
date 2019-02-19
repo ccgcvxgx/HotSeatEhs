@@ -18,7 +18,7 @@ class PopUpVC: UIViewController {
 
     @IBAction func addClose(_ sender: UIButton) {
         onAdd?(Name, Rows, Columns)
-        removeAnimate()
+        self.removeAnimate()
     }
     
     override func viewDidLoad() {

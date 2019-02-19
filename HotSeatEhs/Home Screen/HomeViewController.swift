@@ -11,7 +11,7 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-
+var classIndex = 0
     
     @IBAction func addPeriod(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpVC
@@ -28,8 +28,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let p = Period(name: names, rows: row!, columns: col!)
         list.append(p)
         ClassArray().archive(fileName: "HomeScreen");
+        classIndex = list.firstIndex(of: p) ?? 0
+        list[classIndex].name = names
+        list[classIndex].rowDimension = row
+        list[classIndex].columnDimension = col
         tableView.reloadData()
     }
+
 
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

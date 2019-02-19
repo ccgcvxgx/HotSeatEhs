@@ -14,10 +14,9 @@ class Seat: NSObject, Codable {
     var studentName: String!
     var id: String!
     
-    init(_ row: Int, _ column: Int) {
+    init( _ row: Int, _ column: Int) {
         rowPosition = row
         columnPosition = column
         id = String(row) + String(column)
-        studentName = id
     }
 }

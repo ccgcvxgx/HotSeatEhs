@@ -20,30 +20,20 @@ class Period: NSObject, Codable {
         rowDimension = rows
         columnDimension = columns
         super.init()
-        fillPeriod()
+        seatArr()
     }
     
-    func fillPeriod() {
+    func seatArr() {
         for i in 0..<rowDimension{
             for j in 0..<columnDimension{
                 let seat = Seat(i,j)
                 seatingChart.append(seat)
+                seatIndex = seatingChart.firstIndex(of: seat) ?? 0
+                seatingChart[seatIndex].rowPosition = i
+                seatingChart[seatIndex].columnPosition = j
             }
         }
     }
-    
-    func fill(p: Period) -> [Seat] {
-        for i in 0..<rowDimension{
-            for j in 0..<columnDimension{
-                let seat = Seat(i,j)
-                seatingChart.append(seat)
-            }
-        }
-        var chart = seatingChart
-        return chart
-    }
-    
-    
     private enum CodingKeys: CodingKey{
         case name
         case rowDimension

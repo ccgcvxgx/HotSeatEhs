@@ -9,36 +9,26 @@
 import Foundation
 import UIKit
 
-var list = [
-    Period(name:"One",rows: 5, columns: 7),
-    Period(name:"Two",rows: 5, columns: 7),
-    Period(name:"Three",rows: 5, columns: 7),
-    Period(name:"Four",rows: 5, columns: 7),
-    Period(name:"Five",rows: 5, columns: 7),
-    Period(name:"Six",rows: 5, columns: 7),
-    Period(name:"Seven",rows: 5, columns: 7)
-]
-
 class ClassArray: NSObject, Codable {
     
-    var calsses = list
+    var classes = list
     override init() {
         super.init()
     }
     
     
     private enum CodingKeys: CodingKey{
-        case calsses
+        case classes
     }
     
     func encode(to encoder: Encoder) throws {
         var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(calsses, forKey: .calsses)
+        try container.encode(classes, forKey: .classes)
     }
     
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        calsses = try values.decode([Period].self, forKey: .calsses)
+        classes = try values.decode([Period].self, forKey: .classes)
     }
     
     func archive(fileName: String) {
@@ -67,7 +57,7 @@ class ClassArray: NSObject, Codable {
             withFile: archiveURL.path) as? Data {
             do {
                 let recoveredData = try PropertyListDecoder().decode(ClassArray.self, from: recoveredDataCoded)
-                list = recoveredData.calsses
+                list = recoveredData.classes
                 //...    <- Add more variables as necessary.
                 print("[Period] successfully recovered from file.")
             } catch {
@@ -79,3 +69,5 @@ class ClassArray: NSObject, Codable {
     }
     
 }
+
+
