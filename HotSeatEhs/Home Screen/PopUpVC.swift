@@ -17,8 +17,9 @@ class PopUpVC: UIViewController {
     var onAdd: ((_ n: UITextField, _ r: UITextField, _ c: UITextField) -> Void)?
 
     @IBAction func addClose(_ sender: UIButton) {
-        onAdd?(Name, Rows, Columns)
+        HomeViewController().onAdd(Name, Rows, Columns)
         dismiss(animated: true)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
     override func viewDidLoad() {
