@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+
+
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -15,10 +18,7 @@ var classIndex = 0
     
     @IBAction func addPeriod(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpVC
-        self.addChild(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParent: self)
+        self.present(popOverVC, animated: true)
     }
     
     func onAdd(_ n: UITextField, _ r: UITextField, _ c: UITextField) -> Void {
@@ -32,7 +32,7 @@ var classIndex = 0
         list[classIndex].name = names
         list[classIndex].rowDimension = row
         list[classIndex].columnDimension = col
-        tableView.reloadData()
+        print("bananas")
     }
 
 
