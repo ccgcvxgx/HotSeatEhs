@@ -13,16 +13,25 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var TableView: UITableView!
     
+    @IBOutlet weak var pName: UILabel!
+    
+    var name = list[classIndex].name
+    
+    
     var collectionCells: [Seat] = []
     var tableCells: [Seat] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pName.text = name
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    
+    
     func collectionArr() -> [Seat] {
         collectionCells = list[classIndex].seatingChart
         return collectionCells
@@ -34,7 +43,8 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableCells.count
+        let c = tableArr().count
+        return c
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,14 +52,15 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditScreenTableViewCell", for: indexPath) as! EditScreenTableViewCell
         
         cell.seatID.text = table.seatingChart[seatIndex].id
-        cell.studentName.text = "Andrea"
+        cell.studentName.text = table.seatingChart[seatIndex].id
         cell.textLabel?.text = table.seatingChart[indexPath.row].studentName
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionCells.count
+        let c = collectionArr().count
+        return c
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

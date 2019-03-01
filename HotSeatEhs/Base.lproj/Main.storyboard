@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Dq-pP-aOQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dqe-be-Fep">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,7 +34,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-I4-K7W">
-                                        <rect key="frame" x="132" y="140.5" width="118" height="30"/>
+                                        <rect key="frame" x="133" y="140.5" width="118" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="118" id="TOF-BL-e7I"/>
@@ -81,7 +81,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Period" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N53-Sa-T3v">
-                                        <rect key="frame" x="130.5" y="41.5" width="121" height="20"/>
+                                        <rect key="frame" x="131.5" y="41.5" width="121" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -206,8 +206,8 @@
                     <navigationItem key="navigationItem" id="J2J-k1-vkl"/>
                     <connections>
                         <outlet property="tableView" destination="JnC-9X-Epb" id="MdS-8N-t5Z"/>
-                        <segue destination="5Dq-pP-aOQ" kind="presentation" identifier="HomeRun" id="8J3-eq-F4u"/>
-                        <segue destination="0qv-fa-BLY" kind="presentation" identifier="HomeEdit" id="6hb-5t-QJT"/>
+                        <segue destination="5Dq-pP-aOQ" kind="show" identifier="HomeRun" id="8J3-eq-F4u"/>
+                        <segue destination="0qv-fa-BLY" kind="show" identifier="HomeEdit" id="6hb-5t-QJT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pig-18-J9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -223,13 +223,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="PfO-Vf-dLe">
-                                <rect key="frame" x="400" y="50" width="312" height="40"/>
+                                <rect key="frame" x="400" y="100" width="312" height="40"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cN6-ua-jXK">
-                                <rect key="frame" x="0.0" y="160" width="600" height="604"/>
+                                <rect key="frame" x="0.0" y="210" width="550.5" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cN6-ua-jXK" secondAttribute="height" multiplier="150:151" id="cku-od-gjc"/>
@@ -271,14 +271,14 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2OC-fk-A9R">
-                                <rect key="frame" x="600" y="160" width="512" height="604"/>
+                                <rect key="frame" x="550.5" y="210" width="561.5" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditScreenTableViewCell" rowHeight="120" id="DXO-HD-uwF" customClass="EditScreenTableViewCell" customModule="HotSeatEhs" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="512" height="120"/>
+                                        <rect key="frame" x="0.0" y="28" width="561.5" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXO-HD-uwF" id="6G9-d2-6eS">
-                                            <rect key="frame" x="0.0" y="0.0" width="512" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="561.5" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-E5-Y5l">
@@ -334,6 +334,7 @@
                     <connections>
                         <outlet property="CollectionView" destination="cN6-ua-jXK" id="sdU-Sy-piC"/>
                         <outlet property="TableView" destination="2OC-fk-A9R" id="doV-dt-ilX"/>
+                        <outlet property="pName" destination="PfO-Vf-dLe" id="VWk-uU-Qlq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3VD-LF-hMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
