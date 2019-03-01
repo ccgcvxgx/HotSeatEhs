@@ -33,7 +33,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         list[classIndex].name = names
         list[classIndex].rowDimension = row
         list[classIndex].columnDimension = col
-        print("bananas")
     }
 
 
@@ -50,7 +49,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
-           self.performSegue(withIdentifier: "HomeRun", sender: self)
+           self.performSegue(withIdentifier: "HomeEdit", sender: self)
             
             
         }
@@ -106,5 +105,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let period = list[indexPath.row]
         cell.textLabel?.text = period.name
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "HomeRun", sender: self)
     }
 }
