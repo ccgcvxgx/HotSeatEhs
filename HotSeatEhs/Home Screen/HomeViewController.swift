@@ -40,17 +40,19 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
             }
-        return [delete]
-    }
-        /*let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
+        //return [delete]
+        
+        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
             //move to edit screen
+            let per = list[num]
+            classIndex = list.firstIndex(of: per)!
             self.performSegue(withIdentifier: "HomeEdit", sender: self)
         }
         edit.backgroundColor = UIColor.lightGray
         
         return [delete,edit]
         
-    }*/
+    }
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "HomeEdit" {
