@@ -15,17 +15,15 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     
     @IBOutlet weak var pName: UILabel!
     
-    var name = list[classIndex].name
-    
-    
     var collectionCells: [Seat] = []
     var tableCells: [Seat] = []
-    
+
     override func viewDidLoad() {
-        super.viewDidLoad()
+        let per = list[classIndex]
+        let name = per.name
         pName.text = name
+        super.viewDidLoad()
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -43,8 +41,8 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let c = tableArr().count
-        return c
+        //let c = tableArr().count
+        return tableCells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,8 +57,8 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let c = collectionArr().count
-        return c
+        //let c = collectionArr().count
+        return collectionCells.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -14,13 +14,72 @@ class Period: NSObject, Codable {
     var rowDimension: Int!
     var columnDimension: Int!
     var seatingChart = [Seat]()
+    var time: Double
+    var groupAmount: Int
+    var randomIndex: Int
+    
     
     init(name: String, rows: Int, columns: Int){
         self.name = name
         rowDimension = rows
         columnDimension = columns
+        time = 5.0
+        groupAmount = 2
+        randomIndex = 99
         super.init()
         seatArr()
+    }
+    
+    func chooseSeat() -> Seat {
+        var chosenSeat = Seat(9,9)
+        for _ in stride(from: 0.0, to: time, by: 0.4) {
+            for j in 0..<seatingChart.count{
+                chosenSeat = seatingChart[j]
+            }
+            
+        }
+        return chosenSeat
+    }
+    
+    //function to choose a single row
+    func chooseRow() -> Int {
+        var chosenRow = 99
+        for _ in stride(from: 0.0, to: time, by: 0.4){
+            for j in 0..<seatingChart.count{
+                chosenRow = seatingChart[j].rowPosition
+            }
+            
+        }
+        return chosenRow
+    }
+    
+    //function to choose a single column
+    func chooseColumn() -> Int {
+        var chosenColumn = 99
+        
+        for _ in stride(from: 0.0, to: time, by: 0.4){
+            for j in 0..<seatingChart.count{
+                chosenColumn = seatingChart[j].columnPosition
+            }
+            
+        }
+        return chosenColumn
+    }
+    
+    //function to choose a random group
+    func chooseGroup(seatingChart: [Seat], groupAmount: Int) -> [[Seat]] {
+        var total2D = [[Seat(9,9)]]
+        var chosenGroup: [Seat]
+        var tempArray: [Seat] = seatingChart
+        for _ in 1...(groupAmount){
+            chosenGroup = []
+            let count: Int = tempArray.count
+            randomIndex = Int.random(in: 0..<count)
+            chosenGroup.append(tempArray[randomIndex])
+            tempArray.remove(at: randomIndex)
+            total2D.append(chosenGroup)
+        }
+        return total2D
     }
     
     func seatArr() {
@@ -38,6 +97,9 @@ class Period: NSObject, Codable {
         case name
         case rowDimension
         case columnDimension
+        case time
+        case groupAmount
+        case randomIndex
     }
     
     func encode(to encoder: Encoder) throws {
@@ -45,6 +107,9 @@ class Period: NSObject, Codable {
         try container.encode(name, forKey: .name)
         try container.encode(rowDimension, forKey: .rowDimension)
         try container.encode(columnDimension, forKey: .columnDimension)
+        try container.encode(time, forKey: .time)
+        try container.encode(groupAmount, forKey: .groupAmount)
+        try container.encode(randomIndex, forKey: .randomIndex)
     }
     
     required init(from decoder: Decoder) throws {
@@ -52,6 +117,9 @@ class Period: NSObject, Codable {
         name = try values.decode(String.self, forKey: .name)
         rowDimension = try values.decode(Int.self, forKey: .rowDimension)
         columnDimension = try values.decode(Int.self, forKey: .columnDimension)
+        time = try values.decode(Double.self, forKey: .time)
+        groupAmount = try values.decode(Int.self, forKey: .groupAmount)
+        randomIndex = try values.decode(Int.self, forKey: .randomIndex)
     }
     
     
@@ -85,6 +153,9 @@ class Period: NSObject, Codable {
                 name = recoveredData.name
                 rowDimension = recoveredData.rowDimension
                 columnDimension = recoveredData.columnDimension
+                time = recoveredData.time
+                groupAmount = recoveredData.groupAmount
+                randomIndex = recoveredData.randomIndex
                 //...    <- Add more variables as necessary.
                 print("[Period] successfully recovered from file.")
             } catch {
@@ -96,4 +167,7 @@ class Period: NSObject, Codable {
     }
     
 }
+
+
+
 

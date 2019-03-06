@@ -10,14 +10,16 @@ import UIKit
 
 class RunScreen: UIViewController {
     
-
+    @IBOutlet weak var perName: UILabel!
     override func viewDidLoad() {
+        let name = list[classIndex].name
+        perName.text = name
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func edit(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

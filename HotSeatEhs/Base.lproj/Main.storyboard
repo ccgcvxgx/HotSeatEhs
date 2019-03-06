@@ -22,39 +22,39 @@
                                 <rect key="frame" x="365" y="260" width="382" height="297"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rows" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWc-1h-y0I">
-                                        <rect key="frame" x="14.5" y="145.5" width="58" height="20"/>
+                                        <rect key="frame" x="14.5" y="130" width="58" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columns" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwc-se-hnn">
-                                        <rect key="frame" x="14.5" y="195.5" width="94" height="20"/>
+                                        <rect key="frame" x="14.5" y="180" width="94" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ZN-I4-K7W">
-                                        <rect key="frame" x="133" y="140.5" width="118" height="30"/>
+                                        <rect key="frame" x="133" y="130" width="118" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="118" id="TOF-BL-e7I"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="P3F-vx-AbM"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9er-nz-I6L">
-                                        <rect key="frame" x="133" y="195.5" width="118" height="30"/>
+                                        <rect key="frame" x="133" y="180" width="118" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="118" id="0Gn-aO-TIL"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="Yfb-Gj-aWf"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yh0-bb-Mwa">
-                                        <rect key="frame" x="14.5" y="95.5" width="63" height="20"/>
+                                        <rect key="frame" x="14.5" y="80" width="63" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -70,18 +70,17 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LOc-TU-3VL">
-                                        <rect key="frame" x="131.5" y="90.5" width="119" height="30"/>
+                                        <rect key="frame" x="133" y="80" width="118" height="30"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Pd3-gQ-SfK"/>
-                                            <constraint firstAttribute="width" constant="119" id="dSN-D1-Aac"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="118" id="cOn-Pc-er3"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Period" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N53-Sa-T3v">
-                                        <rect key="frame" x="131.5" y="41.5" width="121" height="20"/>
+                                        <rect key="frame" x="130.5" y="30" width="121" height="20"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -89,28 +88,27 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.24313725489999999" green="0.59999999999999998" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="5ZN-I4-K7W" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" id="2l1-lG-HcX"/>
-                                    <constraint firstItem="5ZN-I4-K7W" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="7" id="3rP-xf-2n7"/>
-                                    <constraint firstItem="N53-Sa-T3v" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" id="44m-Hi-f4n"/>
-                                    <constraint firstItem="dwc-se-hnn" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="-129.5" id="5sG-jZ-1wa"/>
-                                    <constraint firstItem="t24-or-hNu" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" id="7RZ-Dd-HYQ"/>
-                                    <constraint firstItem="Yh0-bb-Mwa" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="-43" id="7q2-vg-JSI"/>
-                                    <constraint firstItem="9er-nz-I6L" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="62" id="D76-qE-RMt"/>
-                                    <constraint firstItem="5ZN-I4-K7W" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="7" id="FbV-mW-me2"/>
-                                    <constraint firstItem="Yh0-bb-Mwa" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="-145" id="LhA-bc-W7O"/>
-                                    <constraint firstItem="LOc-TU-3VL" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" id="Lmh-RN-y9z"/>
-                                    <constraint firstItem="N53-Sa-T3v" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="1" id="Nc9-8f-uTL"/>
-                                    <constraint firstItem="N53-Sa-T3v" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" id="U6j-uO-53c"/>
-                                    <constraint firstItem="LOc-TU-3VL" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="-43" id="aJb-6V-bFy"/>
-                                    <constraint firstItem="ZWc-1h-y0I" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="7" id="cBm-zk-lKh"/>
-                                    <constraint firstItem="dwc-se-hnn" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="57" id="h0r-Qt-A1c"/>
-                                    <constraint firstItem="LOc-TU-3VL" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="1" id="nKx-cM-tYD"/>
-                                    <constraint firstItem="N53-Sa-T3v" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="-97" id="pw7-6I-chY"/>
-                                    <constraint firstItem="ZWc-1h-y0I" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="-147.5" id="pys-hz-U4U"/>
-                                    <constraint firstItem="5ZN-I4-K7W" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="1" id="q8c-g5-e6z"/>
-                                    <constraint firstItem="9er-nz-I6L" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" constant="1" id="wt0-xv-3pL"/>
-                                    <constraint firstItem="LOc-TU-3VL" firstAttribute="centerX" secondItem="0Wo-Ol-pyh" secondAttribute="centerX" id="xRG-RY-RLQ"/>
-                                    <constraint firstItem="t24-or-hNu" firstAttribute="centerY" secondItem="0Wo-Ol-pyh" secondAttribute="centerY" constant="95" id="yWO-la-cen"/>
+                                    <constraint firstItem="N53-Sa-T3v" firstAttribute="leading" secondItem="0Wo-Ol-pyh" secondAttribute="leading" constant="130.5" id="4s7-6y-7Iv"/>
+                                    <constraint firstItem="N53-Sa-T3v" firstAttribute="top" secondItem="0Wo-Ol-pyh" secondAttribute="top" constant="30" id="AHV-4u-3JZ"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="9er-nz-I6L" secondAttribute="trailing" constant="131" id="D9a-gj-eg0"/>
+                                    <constraint firstItem="ZWc-1h-y0I" firstAttribute="leading" secondItem="0Wo-Ol-pyh" secondAttribute="leading" constant="14.5" id="EGG-IM-alO"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="5ZN-I4-K7W" secondAttribute="trailing" constant="131" id="Gs6-cU-YEL"/>
+                                    <constraint firstItem="5ZN-I4-K7W" firstAttribute="leading" secondItem="ZWc-1h-y0I" secondAttribute="trailing" constant="60.5" id="NQq-vB-ety"/>
+                                    <constraint firstItem="LOc-TU-3VL" firstAttribute="leading" secondItem="Yh0-bb-Mwa" secondAttribute="trailing" constant="55.5" id="NVV-at-qvy"/>
+                                    <constraint firstAttribute="trailing" secondItem="t24-or-hNu" secondAttribute="trailing" constant="170.5" id="QRI-b2-o3i"/>
+                                    <constraint firstItem="Yh0-bb-Mwa" firstAttribute="top" secondItem="0Wo-Ol-pyh" secondAttribute="top" constant="80" id="T0R-jA-S8n"/>
+                                    <constraint firstItem="ZWc-1h-y0I" firstAttribute="top" secondItem="Yh0-bb-Mwa" secondAttribute="bottom" constant="30" id="W6F-js-KR3"/>
+                                    <constraint firstItem="dwc-se-hnn" firstAttribute="leading" secondItem="0Wo-Ol-pyh" secondAttribute="leading" constant="14.5" id="WlD-ni-wmL"/>
+                                    <constraint firstItem="LOc-TU-3VL" firstAttribute="top" secondItem="N53-Sa-T3v" secondAttribute="bottom" constant="30" id="XUP-Sg-ZLM"/>
+                                    <constraint firstItem="5ZN-I4-K7W" firstAttribute="top" secondItem="LOc-TU-3VL" secondAttribute="bottom" constant="20" id="a1Y-vk-KkC"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="LOc-TU-3VL" secondAttribute="trailing" constant="131" id="aJP-JQ-YHL"/>
+                                    <constraint firstItem="t24-or-hNu" firstAttribute="leading" secondItem="0Wo-Ol-pyh" secondAttribute="leading" constant="170.5" id="fF0-Rq-YV4"/>
+                                    <constraint firstItem="9er-nz-I6L" firstAttribute="top" secondItem="5ZN-I4-K7W" secondAttribute="bottom" constant="20" id="fl8-DS-hlF"/>
+                                    <constraint firstAttribute="trailing" secondItem="N53-Sa-T3v" secondAttribute="trailing" constant="130.5" id="fo7-IJ-BBW"/>
+                                    <constraint firstAttribute="bottom" secondItem="t24-or-hNu" secondAttribute="bottom" constant="37.5" id="hCb-ra-YWg"/>
+                                    <constraint firstItem="9er-nz-I6L" firstAttribute="leading" secondItem="dwc-se-hnn" secondAttribute="trailing" constant="24.5" id="jzQ-So-bQb"/>
+                                    <constraint firstItem="Yh0-bb-Mwa" firstAttribute="leading" secondItem="0Wo-Ol-pyh" secondAttribute="leading" constant="14.5" id="n8C-lp-Haa"/>
+                                    <constraint firstItem="dwc-se-hnn" firstAttribute="top" secondItem="ZWc-1h-y0I" secondAttribute="bottom" constant="30" id="yLE-I1-Kd9"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -120,7 +118,6 @@
                             <constraint firstItem="0Wo-Ol-pyh" firstAttribute="top" secondItem="FJc-F4-Zxa" secondAttribute="top" constant="240" id="doc-b1-vRh"/>
                             <constraint firstItem="FJc-F4-Zxa" firstAttribute="trailing" secondItem="0Wo-Ol-pyh" secondAttribute="trailing" constant="365" id="f1W-l2-Rxh"/>
                             <constraint firstItem="FJc-F4-Zxa" firstAttribute="bottom" secondItem="0Wo-Ol-pyh" secondAttribute="bottom" constant="277" id="mzw-Qn-2dg"/>
-                            <constraint firstItem="0Wo-Ol-pyh" firstAttribute="centerY" secondItem="kma-sk-rwZ" secondAttribute="centerY" constant="25" id="r9L-hp-eQn"/>
                             <constraint firstItem="0Wo-Ol-pyh" firstAttribute="centerX" secondItem="kma-sk-rwZ" secondAttribute="centerX" id="x8Y-jx-h8t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FJc-F4-Zxa"/>
@@ -296,10 +293,12 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="WF2-cW-a1s" secondAttribute="bottom" constant="45.5" id="0H9-BB-VrU"/>
+                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="WF2-cW-a1s" secondAttribute="trailing" constant="223.5" id="FHy-2Q-Ors"/>
                                                 <constraint firstItem="9SK-E5-Y5l" firstAttribute="top" secondItem="6G9-d2-6eS" secondAttribute="topMargin" constant="19" id="Ine-RR-tGn"/>
-                                                <constraint firstItem="WF2-cW-a1s" firstAttribute="leading" secondItem="9SK-E5-Y5l" secondAttribute="trailing" constant="141" id="PlQ-15-SCC"/>
+                                                <constraint firstItem="WF2-cW-a1s" firstAttribute="leading" relation="lessThanOrEqual" secondItem="9SK-E5-Y5l" secondAttribute="trailing" constant="141" id="PlQ-15-SCC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9SK-E5-Y5l" secondAttribute="bottom" constant="29" id="bi1-x5-8WJ"/>
                                                 <constraint firstItem="9SK-E5-Y5l" firstAttribute="leading" secondItem="6G9-d2-6eS" secondAttribute="leadingMargin" constant="35" id="bqf-ir-6JJ"/>
+                                                <constraint firstItem="WF2-cW-a1s" firstAttribute="leading" relation="lessThanOrEqual" secondItem="9SK-E5-Y5l" secondAttribute="trailing" constant="141" id="gRq-zH-bDx"/>
                                                 <constraint firstItem="WF2-cW-a1s" firstAttribute="top" secondItem="6G9-d2-6eS" secondAttribute="top" constant="44" id="lIQ-Hp-46A"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -371,10 +370,32 @@
                                     <segue destination="LRM-gc-4Jl" kind="presentation" modalPresentationStyle="overCurrentContext" id="qQ0-pO-tLD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Period Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUH-oM-BmR">
+                                <rect key="frame" x="20" y="83" width="172" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yPf-v7-hKo">
+                                <rect key="frame" x="233" y="90" width="39" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="Edit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="edit:" destination="5Dq-pP-aOQ" eventType="touchUpInside" id="js8-z0-ZM6"/>
+                                    <segue destination="0qv-fa-BLY" kind="show" id="zq2-GF-F2O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.24313725489999999" green="0.59999999999999998" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="reV-76-rMf"/>
                     </view>
+                    <connections>
+                        <outlet property="perName" destination="OUH-oM-BmR" id="5CJ-iD-4TJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1E-zD-1GR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -508,4 +529,7 @@
             <point key="canvasLocation" x="-412" y="-347"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="zq2-GF-F2O"/>
+    </inferredMetricsTieBreakers>
 </document>

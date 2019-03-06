@@ -15,7 +15,7 @@ class TimePopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerV
 
     @IBOutlet weak var timeLabel: UILabel!
     
-    var chosenTime: String!
+    var chosenTime = "1"
     var timeArray = ["1","2","3","4","5","6","7","8","9","10"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

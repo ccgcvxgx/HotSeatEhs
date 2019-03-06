@@ -15,7 +15,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
-    var classIndex = 0
     
     @IBAction func addPeriod(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpVC
@@ -28,45 +27,39 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let col = Int(c.text!)
         let p = Period(name: names, rows: row!, columns: col!)
         list.append(p)
-        ClassArray().archive(fileName: "HomeScreen");
-        classIndex = list.firstIndex(of: p) ?? 0
-        list[classIndex].name = names
-        list[classIndex].rowDimension = row
-        list[classIndex].columnDimension = col
+        ClassArray().archive(fileName: "HomeScreen")
     }
-
-
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let num = indexPath.row
         
         let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
             // delete item at indexPath
-            list.remove(at: indexPath.row)
+            list.remove(at: num)
             ClassArray().archive(fileName: "HomeScreen")
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
-            print(list)
+            }
+        return [delete]
+    }
+        /*let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
+            //move to edit screen
+            self.performSegue(withIdentifier: "HomeEdit", sender: self)
         }
-        
-        let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
-           self.performSegue(withIdentifier: "HomeEdit", sender: self)
-            
-            
-        }
-        /*
-        let edit = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
-            // delete item at indexPath
-            tableView.deleteRows(at: [indexPath], with: .fade)
-
-        }
- */
-        
         edit.backgroundColor = UIColor.lightGray
         
         return [delete,edit]
         
-    }
+    }*/
     
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeEdit" {
+            _ = self.tableView.indexPathForSelectedRow
+            _ = segue.destination as! EditScreen
+            
+        }
+    }*/
+
     override func viewDidLoad() {
         super.viewDidLoad()
         ClassArray().restore(fileName: "HomeScreen")
@@ -108,6 +101,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let per = list[indexPath.row]
+        classIndex = list.firstIndex(of: per)!
         performSegue(withIdentifier: "HomeRun", sender: self)
     }
 }

@@ -24,7 +24,6 @@
 		89CDED1D221C686D00782735 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDED1C221C686D00782735 /* Global.swift */; };
 		96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A5F21E8222700D304D7 /* HomeViewController.swift */; };
 		96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */; };
-		96571A6621E824DE00D304D7 /* Selectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6521E824DE00D304D7 /* Selectors.swift */; };
 		EB07213D2215D45000DDA6AF /* GroupPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */; };
 		EB089F1C2225A7A9003B4850 /* TimePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */; };
 		EBFDAAED21C020A40028A380 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEC21C020A40028A380 /* Period.swift */; };
@@ -72,7 +71,6 @@
 		89CDED1C221C686D00782735 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		96571A5F21E8222700D304D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		96571A6521E824DE00D304D7 /* Selectors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Selectors.swift; sourceTree = "<group>"; };
 		EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPopUpViewController.swift; sourceTree = "<group>"; };
 		EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePopUpViewController.swift; sourceTree = "<group>"; };
 		EBFDAAEC21C020A40028A380 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
-				96571A6521E824DE00D304D7 /* Selectors.swift */,
 				EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */,
 				EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */,
 			);
@@ -338,7 +335,6 @@
 				89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */,
 				89CDED1D221C686D00782735 /* Global.swift in Sources */,
 				6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */,
-				96571A6621E824DE00D304D7 /* Selectors.swift in Sources */,
 				EBFDAAED21C020A40028A380 /* Period.swift in Sources */,
 				6554AA0E21DFC66000C9EC64 /* EditScreenTableViewCell.swift in Sources */,
 				6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */,

@@ -14,7 +14,7 @@ class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var groupTypeLabel: UILabel!
     
-    var chosenGroup: String!
+    var chosenGroup = "Single Seat"
     var groupArray = ["Single Seat", "Row", "Column", "Random Group"]
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
