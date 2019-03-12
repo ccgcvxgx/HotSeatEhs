@@ -27,7 +27,8 @@ class Period: NSObject, Codable {
         groupAmount = 2
         randomIndex = 99
         super.init()
-        seatArr()
+        seatList = seatArr()
+        
     }
     
     func chooseSeat() -> Seat {
@@ -82,16 +83,17 @@ class Period: NSObject, Codable {
         return total2D
     }
     
-    func seatArr() {
-        for i in 0..<rowDimension{
-            for j in 0..<columnDimension{
+    func seatArr() -> [Seat] {
+        for i in 1..<rowDimension{
+            for j in 1..<columnDimension{
                 let seat = Seat(i,j)
                 seatingChart.append(seat)
-                seatIndex = seatingChart.firstIndex(of: seat) ?? 0
+                /*seatIndex = seatingChart.firstIndex(of: seat) ?? 0
                 seatingChart[seatIndex].rowPosition = i
-                seatingChart[seatIndex].columnPosition = j
+                seatingChart[seatIndex].columnPosition = j*/
             }
         }
+        return seatingChart
     }
     private enum CodingKeys: CodingKey{
         case name

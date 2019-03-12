@@ -48,6 +48,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             classIndex = list.firstIndex(of: per)!
             self.performSegue(withIdentifier: "HomeEdit", sender: self)
         }
+        
         edit.backgroundColor = UIColor.lightGray
         
         return [delete,edit]

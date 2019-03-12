@@ -19,53 +19,48 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     var tableCells: [Seat] = []
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         let per = list[classIndex]
         let name = per.name
         pName.text = name
-        super.viewDidLoad()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     
-    
-    func collectionArr() -> [Seat] {
-        collectionCells = list[classIndex].seatingChart
+    /*func collectionArr() -> [Seat] {
         return collectionCells
     }
     
     func tableArr() -> [Seat] {
-        tableCells = list[classIndex].seatingChart
         return tableCells
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let c = tableArr().count
+        tableCells = list[classIndex].seatingChart
         return tableCells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let table = list[classIndex]
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditScreenTableViewCell", for: indexPath) as! EditScreenTableViewCell
-        
-        cell.seatID.text = table.seatingChart[seatIndex].id
-        cell.studentName.text = table.seatingChart[seatIndex].id
-        cell.textLabel?.text = table.seatingChart[indexPath.row].studentName
-        
+        let s = table.seatingChart[indexPath.row]
+        cell.studentName?.text = s.studentName
+        cell.seatID?.text = s.id
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //let c = collectionArr().count
+       collectionCells = list[classIndex].seatingChart
         return collectionCells.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collection = list[classIndex]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditScreenCollectionViewCell", for: indexPath) as! EditScreenCollectionViewCell
-        
-        cell.cellID.text = collection.seatingChart[indexPath.row].studentName
+        let s = collection.seatingChart[indexPath.row]
+        cell.cellID.text = s.id
         
         return cell
     }
