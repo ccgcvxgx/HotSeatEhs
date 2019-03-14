@@ -18,7 +18,7 @@ class Seat: NSObject, Codable {
         rowPosition = row
         columnPosition = column
         studentName = ""
-        id = String(row) + String(column)
+        id = String(row) + "." + String(column)
     }
     /*func sName() -> String {
     }*/

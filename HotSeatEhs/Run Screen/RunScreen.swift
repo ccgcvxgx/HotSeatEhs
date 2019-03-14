@@ -8,18 +8,38 @@
 
 import UIKit
 
-class RunScreen: UIViewController {
+class RunScreen: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var perName: UILabel!
+    
+    var collectionCell: [Seat] = []
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         let name = list[classIndex].name
         perName.text = name
-        super.viewDidLoad()
     }
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBAction func edit(_ sender: Any) {
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        collectionCell = list[classIndex].seatingChart
+        return collectionCell.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let collection = list[classIndex]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RunScreenCollectionViewCell", for: indexPath) as! RunScreenCollectionViewCell
+        let s = collection.seatingChart[indexPath.row]
+        cell.cellID.text = s.id
+        
+        return cell
+    }
     /*
     // MARK: - Navigation
 

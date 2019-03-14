@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEED21D8200100B7C040 /* EditScreen.swift */; };
 		6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEEF21D8210F00B7C040 /* RunScreen.swift */; };
+		652059B3223957E900FD1D68 /* RunScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */; };
 		654ABB7321FCC05400DB37C4 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654ABB7221FCC05400DB37C4 /* PopUpVC.swift */; };
 		6554AA0821DFC51300C9EC64 /* EditScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */; };
 		6554AA0E21DFC66000C9EC64 /* EditScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		6504DEED21D8200100B7C040 /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
 		6504DEEF21D8210F00B7C040 /* RunScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScreen.swift; sourceTree = "<group>"; };
+		652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		654ABB7221FCC05400DB37C4 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenTableViewCell.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
 				EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */,
 				EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */,
+				652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */,
 			);
 			path = "Run Screen";
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */,
 				654ABB7321FCC05400DB37C4 /* PopUpVC.swift in Sources */,
 				96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */,
+				652059B3223957E900FD1D68 /* RunScreenCollectionViewCell.swift in Sources */,
 				89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

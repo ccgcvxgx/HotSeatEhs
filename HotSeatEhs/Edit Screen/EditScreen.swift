@@ -28,15 +28,6 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         super.didReceiveMemoryWarning()
     }
     
-    
-    /*func collectionArr() -> [Seat] {
-        return collectionCells
-    }
-    
-    func tableArr() -> [Seat] {
-        return tableCells
-    }*/
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tableCells = list[classIndex].seatingChart
         return tableCells.count
