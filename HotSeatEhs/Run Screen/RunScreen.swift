@@ -21,8 +21,6 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
-    @IBAction func edit(_ sender: Any) {
-    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
