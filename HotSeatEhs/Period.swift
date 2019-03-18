@@ -89,8 +89,8 @@ class Period: NSObject, Codable {
                 let seat = Seat(i,j)
                 seatingChart.append(seat)
                 /*seatIndex = seatingChart.firstIndex(of: seat) ?? 0
-                seatingChart[seatIndex].rowPosition = i
-                seatingChart[seatIndex].columnPosition = j*/
+                 seatingChart[seatIndex].rowPosition = i
+                 seatingChart[seatIndex].columnPosition = j*/
             }
         }
         return seatingChart
@@ -102,6 +102,7 @@ class Period: NSObject, Codable {
         case time
         case groupAmount
         case randomIndex
+        case seatingChart
     }
     
     func encode(to encoder: Encoder) throws {
@@ -112,6 +113,7 @@ class Period: NSObject, Codable {
         try container.encode(time, forKey: .time)
         try container.encode(groupAmount, forKey: .groupAmount)
         try container.encode(randomIndex, forKey: .randomIndex)
+        try container.encode(seatingChart, forKey: .seatingChart)
     }
     
     required init(from decoder: Decoder) throws {
@@ -122,6 +124,7 @@ class Period: NSObject, Codable {
         time = try values.decode(Double.self, forKey: .time)
         groupAmount = try values.decode(Int.self, forKey: .groupAmount)
         randomIndex = try values.decode(Int.self, forKey: .randomIndex)
+        seatingChart = try values.decode([Seat].self, forKey: .seatingChart)
     }
     
     
@@ -158,6 +161,7 @@ class Period: NSObject, Codable {
                 time = recoveredData.time
                 groupAmount = recoveredData.groupAmount
                 randomIndex = recoveredData.randomIndex
+                seatingChart = recoveredData.seatingChart
                 //...    <- Add more variables as necessary.
                 print("[Period] successfully recovered from file.")
             } catch {
@@ -169,6 +173,9 @@ class Period: NSObject, Codable {
     }
     
 }
+
+
+
 
 
 

@@ -38,6 +38,12 @@ class TimePopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBAction func onSave(_ sender: UIButton) {
         dismiss(animated: true)
     }
+    
+    
+    @IBAction func XButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

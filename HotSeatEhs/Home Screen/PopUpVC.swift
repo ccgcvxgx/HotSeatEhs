@@ -14,15 +14,14 @@ class PopUpVC: UIViewController {
     @IBOutlet weak var Rows: UITextField!
     @IBOutlet weak var Columns: UITextField!
     
+   
+    
     var onAdd: ((_ n: UITextField, _ r: UITextField, _ c: UITextField) -> Void)?
 
-    @IBAction func addClose(_ sender: UIButton) {
-        HomeViewController().onAdd(Name, Rows, Columns)
-        dismiss(animated: true)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-    }
+
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
@@ -33,5 +32,15 @@ class PopUpVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func addClose(_ sender: UIButton) {
+        HomeViewController().onAdd(Name, Rows, Columns)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+        dismiss(animated: true)
+    }
+    
+    @IBAction func XButton(_ sender: UIButton) {
+        dismiss(animated:true)
     }
 }
