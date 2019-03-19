@@ -35,9 +35,13 @@ class PopUpVC: UIViewController {
     }
     
     @IBAction func addClose(_ sender: UIButton) {
-        HomeViewController().onAdd(Name, Rows, Columns)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-        dismiss(animated: true)
+        if (Name.text != "" && Rows.text != "" && Columns.text != "")
+        {
+            HomeViewController().onAdd(Name, Rows, Columns)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+            dismiss(animated: true)
+        }
+
     }
     
     @IBAction func XButton(_ sender: UIButton) {

@@ -38,6 +38,15 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
         
         return cell
     }
+    
+    @IBAction func runButton(_ sender: Any) {
+        if groupChosen == "Single Seat" {
+            performSegue(withIdentifier: "SingleSeatSegue", sender: self)
+        }
+        /*if groupChosen == "column" || groupChosen == "row" {
+            performSegue(withIdentifier: <#T##String#>, sender: self)
+        }*/
+    }
     /*
     // MARK: - Navigation
 

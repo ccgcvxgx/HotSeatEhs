@@ -11,3 +11,5 @@ var list = [Period]()
 var classIndex = 0
 var seatIndex = 0
 var seatList = [Seat]()
+var groupChosen = "Single Seat"
+
