@@ -249,7 +249,7 @@
                                 <rect key="frame" x="620" y="210" width="492" height="624"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditScreenTableViewCell" rowHeight="120" id="DXO-HD-uwF" customClass="EditScreenTableViewCell" customModule="HotSeatEhs" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EditScreenTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EditScreenTableViewCell" rowHeight="120" id="DXO-HD-uwF" customClass="EditScreenTableViewCell" customModule="HotSeatEhs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="492" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DXO-HD-uwF" id="6G9-d2-6eS">
@@ -262,27 +262,23 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WF2-cW-a1s">
-                                                    <rect key="frame" x="229.5" y="44" width="93.5" height="30"/>
-                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="30"/>
+                                                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3s0-5o-uDA">
+                                                    <rect key="frame" x="239" y="40" width="97" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WF2-cW-a1s" secondAttribute="bottom" constant="45.5" id="0H9-BB-VrU"/>
-                                                <constraint firstAttribute="trailingMargin" relation="lessThanOrEqual" secondItem="WF2-cW-a1s" secondAttribute="trailing" constant="223.5" id="FHy-2Q-Ors"/>
                                                 <constraint firstItem="9SK-E5-Y5l" firstAttribute="top" secondItem="6G9-d2-6eS" secondAttribute="topMargin" constant="19" id="Ine-RR-tGn"/>
-                                                <constraint firstItem="WF2-cW-a1s" firstAttribute="leading" relation="lessThanOrEqual" secondItem="9SK-E5-Y5l" secondAttribute="trailing" constant="141" id="PlQ-15-SCC"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="9SK-E5-Y5l" secondAttribute="bottom" constant="29" id="bi1-x5-8WJ"/>
                                                 <constraint firstItem="9SK-E5-Y5l" firstAttribute="leading" secondItem="6G9-d2-6eS" secondAttribute="leadingMargin" constant="35" id="bqf-ir-6JJ"/>
-                                                <constraint firstItem="WF2-cW-a1s" firstAttribute="leading" relation="lessThanOrEqual" secondItem="9SK-E5-Y5l" secondAttribute="trailing" constant="141" id="gRq-zH-bDx"/>
-                                                <constraint firstItem="WF2-cW-a1s" firstAttribute="top" secondItem="6G9-d2-6eS" secondAttribute="top" constant="44" id="lIQ-Hp-46A"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="seatID" destination="9SK-E5-Y5l" id="x5R-2I-Uz4"/>
-                                            <outlet property="studentName" destination="WF2-cW-a1s" id="fUs-0b-1Za"/>
+                                            <outlet property="studentName" destination="3s0-5o-uDA" id="ftI-Gk-7wJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -365,7 +361,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgk-kx-Rmd">
-                                                    <rect key="frame" x="19" y="20" width="22" height="20"/>
+                                                    <rect key="frame" x="16.5" y="17.5" width="22" height="20"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

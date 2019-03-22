@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataSource {
+class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var TableView: UITableView!
@@ -54,5 +54,17 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         cell.cellID.text = s.id
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = TableView.cellForRow(at: indexPath) as? EditScreenTableViewCell
+        print("\(String(describing: cell?.seatID!.text))")
+        print("\(String(describing: cell?.studentName!.text))")
+        if (cell?.studentName.hasText ?? false){
+            cell!.seatID!.text = cell!.studentName!.text
+            print("working")
+            TableView.reloadData()
+        }
+        ClassArray().archive(fileName: "HomeScreen")
     }
 }
