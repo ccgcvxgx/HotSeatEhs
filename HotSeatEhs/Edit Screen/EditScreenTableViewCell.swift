@@ -10,5 +10,5 @@ import UIKit
 
 class EditScreenTableViewCell: UITableViewCell {
     @IBOutlet weak var seatID: UILabel!
-    @IBOutlet weak var studentName: UILabel!
+    @IBOutlet weak var studentName: UITextField!
 }

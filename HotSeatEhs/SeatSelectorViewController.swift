@@ -15,7 +15,14 @@ class SeatSelectorViewController: UIViewController {
         super.viewDidLoad()
         let s = list[classIndex].chooseSeat()
         let ID = "Seat " + s.id
-        let N = s.studentName
+        var N = ""
+        if(s.studentName != "" ){
+             N = s.studentName
+        }
+        else{
+             N = s.id
+        }
+        
         id.text = ID
         n.text = N
         // Do any additional setup after loading the view.

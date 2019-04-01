@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataSource {
+class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var TableView: UITableView!
@@ -17,7 +17,7 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
     
     var collectionCells: [Seat] = []
     var tableCells: [Seat] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let per = list[classIndex]
@@ -38,12 +38,17 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let cell = tableView.dequeueReusableCell(withIdentifier: "EditScreenTableViewCell", for: indexPath) as! EditScreenTableViewCell
         let s = table.seatingChart[indexPath.row]
         cell.studentName?.text = s.studentName
-        cell.seatID?.text = s.id
+        if(s.studentName != "" ){
+            cell.seatID.text = s.studentName
+        }
+        else{
+            cell.seatID.text = s.id
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-       collectionCells = list[classIndex].seatingChart
+        collectionCells = list[classIndex].seatingChart
         return collectionCells.count
     }
     
@@ -51,8 +56,30 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let collection = list[classIndex]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EditScreenCollectionViewCell", for: indexPath) as! EditScreenCollectionViewCell
         let s = collection.seatingChart[indexPath.row]
-        cell.cellID.text = s.id
+        if(s.studentName != "" ){
+            cell.cellID.text = s.studentName
+        }
+        else{
+            cell.cellID.text = s.id
+        }
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = TableView.cellForRow(at: indexPath) as? EditScreenTableViewCell
+        
+        if (cell?.studentName.hasText ?? false){
+            cell!.seatID!.text = cell!.studentName!.text
+            let cCell = CollectionView.cellForItem(at: indexPath) as? EditScreenCollectionViewCell
+            cCell?.cellID.text = cell?.studentName!.text
+            list[classIndex].seatingChart[indexPath.row].studentName = cell?.studentName!.text
+        }
+        ClassArray().archive(fileName: "HomeScreen")
+        //TableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+    }
 }
+
+
+
+

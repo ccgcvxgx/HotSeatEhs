@@ -34,10 +34,17 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
         let collection = list[classIndex]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RunScreenCollectionViewCell", for: indexPath) as! RunScreenCollectionViewCell
         let s = collection.seatingChart[indexPath.row]
-        cell.cellID.text = s.id
+        if s.studentName != ""{
+            cell.cellID.text = s.studentName
+        }
+        else{
+            cell.cellID.text = s.id
+            
+        }
         
         return cell
     }
+
     
     @IBAction func runButton(_ sender: Any) {
         if groupChosen == "Single Seat" {
