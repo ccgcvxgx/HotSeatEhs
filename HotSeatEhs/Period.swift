@@ -32,38 +32,40 @@ class Period: NSObject, Codable {
     }
     
     func chooseSeat() -> Seat {
-        var chosenSeat = Seat(9,9)
-        for _ in stride(from: 0.0, to: time, by: 0.4) {
+        let rowChosen = Int.random(in: 1...rowDimension)
+        let colChosen = Int.random(in: 1...columnDimension)
+        let chosenSeat = Seat(rowChosen, colChosen)
+        /*for _ in stride(from: 0.0, to: time, by: 0.4) {
             for j in 0..<seatingChart.count{
                 chosenSeat = seatingChart[j]
             }
             
-        }
+        }*/
         return chosenSeat
     }
     
     //function to choose a single row
     func chooseRow() -> Int {
-        var chosenRow = 99
-        for _ in stride(from: 0.0, to: time, by: 0.4){
+        let chosenRow = Int.random(in: 1...rowDimension)
+        /*for _ in stride(from: 0.0, to: time, by: 0.4){
             for j in 0..<seatingChart.count{
                 chosenRow = seatingChart[j].rowPosition
             }
             
-        }
+        }*/
         return chosenRow
     }
     
     //function to choose a single column
     func chooseColumn() -> Int {
-        var chosenColumn = 99
+        let chosenColumn = Int.random(in: 1...columnDimension)
         
-        for _ in stride(from: 0.0, to: time, by: 0.4){
+        /*for _ in stride(from: 0.0, to: time, by: 0.4){
             for j in 0..<seatingChart.count{
                 chosenColumn = seatingChart[j].columnPosition
             }
             
-        }
+        }*/
         return chosenColumn
     }
     

@@ -43,9 +43,9 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
         if groupChosen == "Single Seat" {
             performSegue(withIdentifier: "SingleSeatSegue", sender: self)
         }
-        /*if groupChosen == "column" || groupChosen == "row" {
-            performSegue(withIdentifier: <#T##String#>, sender: self)
-        }*/
+        if groupChosen == "Column" || groupChosen == "Row" {
+            performSegue(withIdentifier: "RowColumnSegue", sender: self)
+        }
     }
     /*
     // MARK: - Navigation

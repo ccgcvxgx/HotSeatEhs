@@ -15,7 +15,46 @@ class RowColumnSelectorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let per = list[classIndex]
+        if groupChosen == "Row" {
+            let s = per.chooseRow()
+            let ID = "Row " + String(s)
+            id.text = ID
+            var rowNames = [String]()
+            for i in 1..<(per.rowDimension + 1){
+                for j in 1..<(per.columnDimension + 1) {
+                    if j == s {
+                        let student = Seat(i,j).studentName
+                        rowNames.append(student!)
+                    }
+                }
+            }
+            var n = ""
+            for i in 0..<rowNames.count{
+                var r = rowNames[i]
+                n = n + r + ", "
+            }
+            names.text = n
+        }
+        if groupChosen == "Column" {
+            let s = per.chooseColumn()
+            let ID = "Column " + String(s)
+            id.text = ID
+            var colNames = [String]()
+            for i in 1..<(per.rowDimension + 1){
+                for j in 1..<(per.columnDimension + 1) {
+                    if i == s {
+                        let student = Seat(i,j).studentName
+                        colNames.append(student!)
+                    }
+                }
+            }
+            var n = ""
+            for i in 0..<colNames.count{
+                var r = colNames[i]
+                n = n + r + ", "
+            }
+            names.text = n
         // Do any additional setup after loading the view.
     }
     
@@ -30,4 +69,5 @@ class RowColumnSelectorViewController: UIViewController {
     }
     */
 
+}
 }

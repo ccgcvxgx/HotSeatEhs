@@ -156,8 +156,8 @@
 			children = (
 				89AA752721BADECF006FBB07 /* Main.storyboard */,
 				65442D87223FF4FB00A999EE /* SeatSelectorViewController.swift */,
-				65442D89223FF50800A999EE /* GroupSelectorViewController.swift */,
 				65442D8B223FF52300A999EE /* RowColumnSelectorViewController.swift */,
+				65442D89223FF50800A999EE /* GroupSelectorViewController.swift */,
 				EB089F1D2225A7AD003B4850 /* Run Screen */,
 				89CDED1C221C686D00782735 /* Global.swift */,
 				6554AA0621DFC4E700C9EC64 /* Edit Screen */,
