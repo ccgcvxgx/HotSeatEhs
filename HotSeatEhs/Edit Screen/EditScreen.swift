@@ -70,7 +70,7 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let cell = TableView.cellForRow(at: indexPath) as? EditScreenTableViewCell
         
         if (cell?.studentName.hasText ?? false){
-            cell!.seatID!.text = cell!.studentName!.text
+            //cell!.seatID!.text = cell!.studentName!.text
             let cCell = CollectionView.cellForItem(at: indexPath) as? EditScreenCollectionViewCell
             cCell?.cellID.text = cell?.studentName!.text
             list[classIndex].seatingChart[indexPath.row].studentName = cell?.studentName!.text
@@ -79,6 +79,9 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         //TableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.fade)
     }
 }
+
+
+
 
 
 

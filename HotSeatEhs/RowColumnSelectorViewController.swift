@@ -31,8 +31,9 @@ class RowColumnSelectorViewController: UIViewController {
             }
             var n = ""
             for i in 0..<rowNames.count{
-                var r = rowNames[i]
-                n = n + r + ", "
+                let r = rowNames[i]
+               
+                n = n + r + " 1"
             }
             names.text = n
         }
@@ -41,18 +42,19 @@ class RowColumnSelectorViewController: UIViewController {
             let ID = "Column " + String(s)
             id.text = ID
             var colNames = [String]()
-            for i in 1..<(per.rowDimension + 1){
-                for j in 1..<(per.columnDimension + 1) {
+            for i in 1..<(per.columnDimension + 1){
                     if i == s {
-                        let student = Seat(i,j).studentName
+                    for j in 1..<(per.rowDimension + 1) {
+                        let student = Seat(j,i).studentName
                         colNames.append(student!)
                     }
                 }
             }
+            print (colNames.count)
             var n = ""
             for i in 0..<colNames.count{
-                var r = colNames[i]
-                n = n + r + ", "
+                let r = colNames[i]
+                n = n + r + "1 "
             }
             names.text = n
         // Do any additional setup after loading the view.

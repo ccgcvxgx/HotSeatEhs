@@ -86,8 +86,8 @@ class Period: NSObject, Codable {
     }
     
     func seatArr() -> [Seat] {
-        for i in 1..<(rowDimension+1){
-            for j in 1..<(columnDimension+1){
+        for i in stride(from: rowDimension, through: 1, by: -1){
+            for j in stride(from: columnDimension, through: 1, by: -1){
                 let seat = Seat(i,j)
                 seatingChart.append(seat)
                 /*seatIndex = seatingChart.firstIndex(of: seat) ?? 0
