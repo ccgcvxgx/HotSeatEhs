@@ -30,66 +30,68 @@ class Period: NSObject, Codable {
         seatList = seatArr()
         
     }
-    
-    func chooseSeat() -> Seat {
-        let rowChosen = Int.random(in: 1...rowDimension)
-        let colChosen = Int.random(in: 1...columnDimension)
-        let chosenSeat = Seat(rowChosen, colChosen)
-        /*for _ in stride(from: 0.0, to: time, by: 0.4) {
-            for j in 0..<seatingChart.count{
-                chosenSeat = seatingChart[j]
-            }
-            
-        }*/
-        return chosenSeat
-    }
-    
-    //function to choose a single row
-    func chooseRow() -> Int {
-        let chosenRow = Int.random(in: 1...rowDimension)
-        /*for _ in stride(from: 0.0, to: time, by: 0.4){
-            for j in 0..<seatingChart.count{
-                chosenRow = seatingChart[j].rowPosition
-            }
-            
-        }*/
-        return chosenRow
-    }
-    
-    //function to choose a single column
-    func chooseColumn() -> Int {
-        let chosenColumn = Int.random(in: 1...columnDimension)
-        
-        /*for _ in stride(from: 0.0, to: time, by: 0.4){
-            for j in 0..<seatingChart.count{
-                chosenColumn = seatingChart[j].columnPosition
-            }
-            
-        }*/
-        return chosenColumn
-    }
-    
-    //function to choose a random group
-    func chooseGroup(seatingChart: [Seat], groupAmount: Int) -> [[Seat]] {
-        var total2D = [[Seat(9,9)]]
-        var chosenGroup: [Seat]
-        var tempArray: [Seat] = seatingChart
-        for _ in 1...(groupAmount){
-            chosenGroup = []
-            let count: Int = tempArray.count
-            randomIndex = Int.random(in: 0..<count)
-            chosenGroup.append(tempArray[randomIndex])
-            tempArray.remove(at: randomIndex)
-            total2D.append(chosenGroup)
-        }
-        return total2D
-    }
-    
+    /*
+     func chooseSeat() -> Seat {
+     let rowChosen = Int.random(in: 1...rowDimension)
+     let colChosen = Int.random(in: 1...columnDimension)
+     let chosenSeat = Seat(rowChosen, colChosen)
+     /*for _ in stride(from: 0.0, to: time, by: 0.4) {
+     for j in 0..<seatingChart.count{
+     chosenSeat = seatingChart[j]
+     }
+     
+     }*/
+     return chosenSeat
+     }
+     
+     //function to choose a single row
+     func chooseRow() -> Int {
+     let chosenRow = Int.random(in: 1...rowDimension)
+     /*for _ in stride(from: 0.0, to: time, by: 0.4){
+     for j in 0..<seatingChart.count{
+     chosenRow = seatingChart[j].rowPosition
+     }
+     
+     }*/
+     return chosenRow
+     }
+     
+     //function to choose a single column
+     func chooseColumn() -> Int {
+     let chosenColumn = Int.random(in: 1...columnDimension)
+     
+     /*for _ in stride(from: 0.0, to: time, by: 0.4){
+     for j in 0..<seatingChart.count{
+     chosenColumn = seatingChart[j].columnPosition
+     }
+     
+     }*/
+     return chosenColumn
+     }
+     
+     //function to choose a random group
+     func chooseGroup(seatingChart: [Seat], groupAmount: Int) -> [[Seat]] {
+     var total2D = [[Seat(9,9,0)]]
+     var chosenGroup: [Seat]
+     var tempArray: [Seat] = seatingChart
+     for _ in 1...(groupAmount){
+     chosenGroup = []
+     let count: Int = tempArray.count
+     randomIndex = Int.random(in: 0..<count)
+     chosenGroup.append(tempArray[randomIndex])
+     tempArray.remove(at: randomIndex)
+     total2D.append(chosenGroup)
+     }
+     return total2D
+     }
+     */
     func seatArr() -> [Seat] {
+        var count = 0
         for i in stride(from: rowDimension, through: 1, by: -1){
             for j in stride(from: columnDimension, through: 1, by: -1){
-                let seat = Seat(i,j)
+                let seat = Seat(i,j,count)
                 seatingChart.append(seat)
+                count += 1
                 /*seatIndex = seatingChart.firstIndex(of: seat) ?? 0
                  seatingChart[seatIndex].rowPosition = i
                  seatingChart[seatIndex].columnPosition = j*/

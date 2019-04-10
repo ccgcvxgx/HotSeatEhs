@@ -428,6 +428,7 @@
                     <connections>
                         <outlet property="collectionView" destination="ixF-og-MCh" id="xw1-Pv-UOm"/>
                         <outlet property="perName" destination="OUH-oM-BmR" id="5CJ-iD-4TJ"/>
+                        <outlet property="runCollection" destination="ixF-og-MCh" id="rJD-Qb-iOO"/>
                         <segue destination="mY5-Gv-JcB" kind="show" identifier="SingleSeatSegue" id="QDn-lb-usZ"/>
                         <segue destination="WIT-zK-iUW" kind="show" identifier="RowColumnSegue" id="iZ6-9e-Fbg"/>
                     </connections>
