@@ -32,7 +32,6 @@ class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         chosenGroup = groupArray[row]
         groupChosen = chosenGroup
-        groupTypeLabel.text = "Chosen:" + chosenGroup
     }
     
     @IBAction func onSave(_ sender: UIButton) {
