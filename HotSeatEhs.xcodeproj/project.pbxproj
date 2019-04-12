@@ -10,12 +10,10 @@
 		6504DEEE21D8200100B7C040 /* EditScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEED21D8200100B7C040 /* EditScreen.swift */; };
 		6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504DEEF21D8210F00B7C040 /* RunScreen.swift */; };
 		652059B3223957E900FD1D68 /* RunScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */; };
-		65442D88223FF4FB00A999EE /* SeatSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65442D87223FF4FB00A999EE /* SeatSelectorViewController.swift */; };
-		65442D8A223FF50800A999EE /* GroupSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65442D89223FF50800A999EE /* GroupSelectorViewController.swift */; };
-		65442D8C223FF52300A999EE /* RowColumnSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65442D8B223FF52300A999EE /* RowColumnSelectorViewController.swift */; };
 		654ABB7321FCC05400DB37C4 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654ABB7221FCC05400DB37C4 /* PopUpVC.swift */; };
 		6554AA0821DFC51300C9EC64 /* EditScreenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */; };
 		6554AA0E21DFC66000C9EC64 /* EditScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */; };
+		65E98E4B225E48B400F787C6 /* GroupPropertiesPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E98E4A225E48B400F787C6 /* GroupPropertiesPopUpViewController.swift */; };
 		896350D12209F25700C5EAF8 /* ClassArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896350D02209F25700C5EAF8 /* ClassArray.swift */; };
 		89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA751F21BADECF006FBB07 /* AppDelegate.swift */; };
 		89AA752421BADECF006FBB07 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA752321BADECF006FBB07 /* DataViewController.swift */; };
@@ -29,7 +27,6 @@
 		96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A5F21E8222700D304D7 /* HomeViewController.swift */; };
 		96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */; };
 		EB07213D2215D45000DDA6AF /* GroupPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */; };
-		EB089F1C2225A7A9003B4850 /* TimePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */; };
 		EBFDAAED21C020A40028A380 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEC21C020A40028A380 /* Period.swift */; };
 		EBFDAAEF21C021110028A380 /* Seat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBFDAAEE21C021110028A380 /* Seat.swift */; };
 /* End PBXBuildFile section */
@@ -55,12 +52,10 @@
 		6504DEED21D8200100B7C040 /* EditScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreen.swift; sourceTree = "<group>"; };
 		6504DEEF21D8210F00B7C040 /* RunScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScreen.swift; sourceTree = "<group>"; };
 		652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunScreenCollectionViewCell.swift; sourceTree = "<group>"; };
-		65442D87223FF4FB00A999EE /* SeatSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectorViewController.swift; sourceTree = "<group>"; };
-		65442D89223FF50800A999EE /* GroupSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupSelectorViewController.swift; sourceTree = "<group>"; };
-		65442D8B223FF52300A999EE /* RowColumnSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowColumnSelectorViewController.swift; sourceTree = "<group>"; };
 		654ABB7221FCC05400DB37C4 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
 		6554AA0721DFC51300C9EC64 /* EditScreenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenCollectionViewCell.swift; sourceTree = "<group>"; };
 		6554AA0D21DFC66000C9EC64 /* EditScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditScreenTableViewCell.swift; sourceTree = "<group>"; };
+		65E98E4A225E48B400F787C6 /* GroupPropertiesPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPropertiesPopUpViewController.swift; sourceTree = "<group>"; };
 		896350D02209F25700C5EAF8 /* ClassArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassArray.swift; sourceTree = "<group>"; };
 		89AA751C21BADECF006FBB07 /* HotSeatEhs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotSeatEhs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA751F21BADECF006FBB07 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +75,6 @@
 		96571A5F21E8222700D304D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupPopUpViewController.swift; sourceTree = "<group>"; };
-		EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePopUpViewController.swift; sourceTree = "<group>"; };
 		EBFDAAEC21C020A40028A380 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		EBFDAAEE21C021110028A380 /* Seat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,9 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				89AA752721BADECF006FBB07 /* Main.storyboard */,
-				65442D87223FF4FB00A999EE /* SeatSelectorViewController.swift */,
-				65442D8B223FF52300A999EE /* RowColumnSelectorViewController.swift */,
-				65442D89223FF50800A999EE /* GroupSelectorViewController.swift */,
 				EB089F1D2225A7AD003B4850 /* Run Screen */,
 				89CDED1C221C686D00782735 /* Global.swift */,
 				6554AA0621DFC4E700C9EC64 /* Edit Screen */,
@@ -197,8 +188,8 @@
 			children = (
 				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
 				EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */,
-				EB089F1B2225A7A9003B4850 /* TimePopUpViewController.swift */,
 				652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */,
+				65E98E4A225E48B400F787C6 /* GroupPropertiesPopUpViewController.swift */,
 			);
 			path = "Run Screen";
 			sourceTree = "<group>";
@@ -339,11 +330,7 @@
 			files = (
 				6554AA0821DFC51300C9EC64 /* EditScreenCollectionViewCell.swift in Sources */,
 				89AA752621BADECF006FBB07 /* ModelController.swift in Sources */,
-				EB089F1C2225A7A9003B4850 /* TimePopUpViewController.swift in Sources */,
-				65442D8C223FF52300A999EE /* RowColumnSelectorViewController.swift in Sources */,
-				65442D8A223FF50800A999EE /* GroupSelectorViewController.swift in Sources */,
 				96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */,
-				65442D88223FF4FB00A999EE /* SeatSelectorViewController.swift in Sources */,
 				EBFDAAEF21C021110028A380 /* Seat.swift in Sources */,
 				EB07213D2215D45000DDA6AF /* GroupPopUpViewController.swift in Sources */,
 				896350D12209F25700C5EAF8 /* ClassArray.swift in Sources */,
@@ -355,6 +342,7 @@
 				6504DEF021D8210F00B7C040 /* RunScreen.swift in Sources */,
 				654ABB7321FCC05400DB37C4 /* PopUpVC.swift in Sources */,
 				96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */,
+				65E98E4B225E48B400F787C6 /* GroupPropertiesPopUpViewController.swift in Sources */,
 				652059B3223957E900FD1D68 /* RunScreenCollectionViewCell.swift in Sources */,
 				89AA752021BADECF006FBB07 /* AppDelegate.swift in Sources */,
 			);

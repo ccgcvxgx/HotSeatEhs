@@ -39,7 +39,7 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let s = table.seatingChart[indexPath.row]
         cell.studentName?.text = s.studentName
         if(s.studentName != "" ){
-            cell.seatID.text = s.studentName
+            cell.seatID.text = s.id
         }
         else{
             cell.seatID.text = s.id

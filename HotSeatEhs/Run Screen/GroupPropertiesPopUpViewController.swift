@@ -1,14 +1,14 @@
 //
-//  GroupSelectorViewController.swift
+//  GroupPropertiesPopUpViewController.swift
 //  HotSeatEhs
 //
-//  Created by Andrea on 3/18/19.
+//  Created by Andrea on 4/10/19.
 //  Copyright © 2019 district196.org. All rights reserved.
 //
 
 import UIKit
 
-class GroupSelectorViewController: UIViewController {
+class GroupPropertiesPopUpViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
