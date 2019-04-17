@@ -34,9 +34,13 @@ class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
         groupChosen = chosenGroup
     }
     
-    @IBAction func onSave(_ sender: UIButton) {
+    @IBAction func onSave(_ sender: Any) {
         dismiss(animated: true)
+        if (groupChosen == "Random Group"){
+            performSegue(withIdentifier: "GroupPropertiesPopUp", sender: self)
+        }
     }
+
     
     @IBAction func XButton(_ sender: UIButton) {
         dismiss(animated:true)

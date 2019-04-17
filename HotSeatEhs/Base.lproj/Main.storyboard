@@ -85,14 +85,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="0.903169014084507" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Yh0-bb-Mwa" firstAttribute="leading" secondItem="0Wo-Ol-pyh" secondAttribute="leading" constant="15" id="SEw-mk-kpI"/>
                                     <constraint firstItem="Yh0-bb-Mwa" firstAttribute="top" secondItem="a5h-Ea-dO4" secondAttribute="bottom" constant="34" id="j9Z-PX-INM"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="0Wo-Ol-pyh" firstAttribute="leading" secondItem="FJc-F4-Zxa" secondAttribute="leading" constant="365" id="1hv-Ma-b2I"/>
                             <constraint firstItem="0Wo-Ol-pyh" firstAttribute="centerX" secondItem="kma-sk-rwZ" secondAttribute="centerX" constant="-0.5" id="74r-i1-HY8"/>
@@ -418,6 +418,7 @@
                             <constraint firstItem="9qC-7f-dd7" firstAttribute="leading" secondItem="reV-76-rMf" secondAttribute="leading" constant="495" id="TnP-KY-dw3"/>
                             <constraint firstItem="ssR-dM-E15" firstAttribute="top" secondItem="reV-76-rMf" secondAttribute="top" constant="38" id="h7R-6i-D7F"/>
                             <constraint firstItem="crj-GV-0Jw" firstAttribute="top" secondItem="ixF-og-MCh" secondAttribute="bottom" constant="84" id="k5O-fo-q7d"/>
+                            <constraint firstItem="reV-76-rMf" firstAttribute="trailing" secondItem="OUH-oM-BmR" secondAttribute="trailing" constant="389" id="lf7-75-xX1"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="crj-GV-0Jw" secondAttribute="bottom" constant="54" id="mlS-Ht-Y1j"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="ixF-og-MCh" secondAttribute="bottom" constant="196" id="nDu-sf-Yhz"/>
                             <constraint firstItem="ssR-dM-E15" firstAttribute="leading" secondItem="ixF-og-MCh" secondAttribute="trailing" constant="-27" id="pzR-jH-nFD"/>
@@ -438,7 +439,7 @@
         <!--Group Properties Pop Up View Controller-->
         <scene sceneID="Hka-2k-PeH">
             <objects>
-                <viewController definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="overCurrentContext" id="dew-57-kKZ" customClass="GroupPropertiesPopUpViewController" customModule="HotSeatEhs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupProperitesPopUp" definesPresentationContext="YES" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="overCurrentContext" id="dew-57-kKZ" customClass="GroupPropertiesPopUpViewController" customModule="HotSeatEhs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6fG-XP-PoE">
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -468,13 +469,6 @@
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Zb-GW-Lxk">
-                                        <rect key="frame" x="128" y="235" width="38" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="th8-Bb-Em4">
                                         <rect key="frame" x="102" y="161" width="97" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -482,17 +476,29 @@
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qul-37-i8L">
+                                        <rect key="frame" x="133" y="226" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="saveButton:" destination="dew-57-kKZ" eventType="touchUpInside" id="WLd-As-EOE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93759790256407394" green="0.9468810501142132" blue="0.9468810501142132" alpha="0.7325824058219178" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Czd-wP-Wax"/>
                     </view>
+                    <connections>
+                        <outlet property="numberOfGroups" destination="PmR-21-hVw" id="C8k-a6-jyC"/>
+                        <outlet property="numberOfPeople" destination="th8-Bb-Em4" id="fWY-7E-xCU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rTJ-x8-t1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1802.6978417266187" y="-771.22302158273385"/>
+            <point key="canvasLocation" x="1769" y="-756"/>
         </scene>
         <!--Group Pop Up View Controller-->
         <scene sceneID="Bwb-yP-LLG">
@@ -503,7 +509,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="akd-1X-JbK">
-                                <rect key="frame" x="743" y="90" width="313" height="272"/>
+                                <rect key="frame" x="400" y="281" width="313" height="272"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fx4-4f-Lfv">
@@ -519,7 +525,8 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Save"/>
                                         <connections>
-                                            <action selector="onSave:" destination="LRM-gc-4Jl" eventType="touchUpInside" id="V78-hW-3r7"/>
+                                            <action selector="onSave:" destination="LRM-gc-4Jl" eventType="touchUpInside" id="0Xs-Aa-7qe"/>
+                                            <segue destination="dew-57-kKZ" kind="presentation" identifier="GroupPropertiesPopUp" id="9hB-nv-vWd"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ny-vE-2Ig">
@@ -541,10 +548,10 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.96470588235294119" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="0.5037457191780822" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="779-Oh-6Ll"/>
                     </view>
                     <connections>

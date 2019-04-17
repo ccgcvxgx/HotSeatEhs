@@ -13,14 +13,15 @@ class Seat: NSObject, Codable {
     var columnPosition: Int!
     var studentName: String!
     var id: String!
-    var flag: Int!
+    var backColor: String!
     
-    init( _ row: Int, _ column: Int, _ spot: Int) {
+    init( _ row: Int, _ column: Int, _ color: String) {
         rowPosition = row
         columnPosition = column
         studentName = ""
         id = String(column) + "." + String(row)
-        flag = spot
+        backColor = color
+        
     }
     /*func sName() -> String {
      }*/

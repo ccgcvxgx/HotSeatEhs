@@ -1,14 +1,14 @@
-//
-//  RunScreen.swift
-//  HotSeatEhs
-//
-//  Created by Andrea on 12/29/18.
-//  Copyright © 2018 district196.org. All rights reserved.
-//
-
-import UIKit
-
-class RunScreen: UIViewController, UICollectionViewDataSource {
+ //
+ //  RunScreen.swift
+ //  HotSeatEhs
+ //
+ //  Created by Andrea on 12/29/18.
+ //  Copyright © 2018 district196.org. All rights reserved.
+ //
+ 
+ import UIKit
+ 
+ class RunScreen: UIViewController, UICollectionViewDataSource {
     
     @IBOutlet weak var perName: UILabel!
     
@@ -42,15 +42,33 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
             cell.cellID.text = s.id
             
         }
+        let color = s.backColor as! String
+        
+        if (color == "red") {
+            cell.backgroundColor = UIColor.red
+            
+        }
+        else if (color == "white") {
+            cell.backgroundColor = UIColor.white
+            
+        }
+        else{
+            cell.backgroundColor = UIColor.brown
+            
+        }
         
         return cell
     }
     
+    func onSave (_ g: UITextField, _ p: UITextField) -> Void {
+        let groups = Int(g.text!)
+        let people = Int(p.text!)
+    }
     
     @IBAction func runButton(_ sender: Any) {
         
-        for cell in runCollection.visibleCells as! [RunScreenCollectionViewCell] {
-            cell.backgroundColor = UIColor.white
+        for i in stride(from: 0, through: list[classIndex].seatingChart.count-1, by: 1){
+            list[classIndex].seatingChart[i].backColor = "white"
         }
         if groupChosen == "Single Seat" {
             let selected = runCollection.visibleCells.randomElement()
@@ -58,20 +76,13 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
             //performSegue(withIdentifier: "SingleSeatSegue", sender: self)
         }
         if groupChosen == "Row" {
-            let max = list[classIndex].columnDimension - 1
-            let rand = Int.random(in: 0...max)
-            let rowStart = 0//+(rand*max)
-            var seatChart = runCollection.visibleCells as! [RunScreenCollectionViewCell]
-            /*
-             for i in 0...max {
-             //seatChart[rowStart + bump].backgroundColor = UIColor.red
-             seatChart[i].backgroundColor = UIColor.purple
-             print(seatChart[i].cellID.text)
-             }*/
-            for i in 0...runCollection.visibleCells.count - 1{
-                print(list[classIndex].seatingChart[i].flag)
-                print(list[classIndex].seatingChart[i].id)
-                
+            
+            let rand = Int.random(in: 0...4)
+            let rowStart = 7 * rand
+            for i in 0...6 {
+                let cell = list[classIndex].seatingChart[rowStart+i]
+                cell.backColor = "red"
+                runCollection.reloadData()
             }
             
             
@@ -91,4 +102,6 @@ class RunScreen: UIViewController, UICollectionViewDataSource {
      }
      */
     
-}
+ }
+ 
+
