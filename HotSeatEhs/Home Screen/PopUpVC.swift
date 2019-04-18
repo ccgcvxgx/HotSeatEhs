@@ -25,6 +25,8 @@ class PopUpVC: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        self.view.layer.cornerRadius = 20
+        self.view.layer.masksToBounds = true
     
         // Do any additional setup after loading the view.
     }
