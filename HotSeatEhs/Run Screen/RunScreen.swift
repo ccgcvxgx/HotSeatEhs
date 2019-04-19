@@ -35,6 +35,7 @@
         let collection = list[classIndex]
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RunScreenCollectionViewCell", for: indexPath) as! RunScreenCollectionViewCell
         let s = collection.seatingChart[indexPath.row]
+        cell.backgroundColor = UIColor.white
         if s.studentName != ""{
             cell.cellID.text = s.studentName
         }
@@ -70,11 +71,16 @@
         for i in stride(from: 0, through: list[classIndex].seatingChart.count-1, by: 1){
             list[classIndex].seatingChart[i].backColor = "white"
         }
+        
+        
         if groupChosen == "Single Seat" {
-            let selected = runCollection.visibleCells.randomElement()
-            selected!.backgroundColor = UIColor.red
+            let rand = Int.random(in: 0...list[classIndex].seatingChart.count - 1)
+            let cell = list[classIndex].seatingChart[rand]
+            cell.backColor = "red"
+            runCollection.reloadData()
             //performSegue(withIdentifier: "SingleSeatSegue", sender: self)
         }
+        
         if groupChosen == "Row" {
             
             let rand = Int.random(in: 0...4)
@@ -92,16 +98,8 @@
             
         }
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    
     
  }
  
-
+ 

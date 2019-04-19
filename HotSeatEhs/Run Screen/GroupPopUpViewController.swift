@@ -38,6 +38,9 @@ class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
         if (chosenGroup == "Random Group"){
             performSegue(withIdentifier: "GroupPropertiesPopUp", sender: self)
         }
+        else {
+            dismiss(animated: true)
+        }
     }
 
     
