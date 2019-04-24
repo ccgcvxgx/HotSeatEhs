@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBOutlet weak var addButton: UIButton!
     @IBAction func addPeriod(_ sender: Any) {
         let popOverVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "sbPopUpID") as! PopUpVC
         self.present(popOverVC, animated: true)
@@ -68,6 +69,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         ClassArray().restore(fileName: "HomeScreen")
         tableView.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
+        addButton.layer.cornerRadius = 5
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         

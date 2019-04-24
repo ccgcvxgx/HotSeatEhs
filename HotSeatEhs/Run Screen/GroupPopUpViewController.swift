@@ -11,8 +11,10 @@ import UIKit
 
 class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var popUp: UIView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var groupTypeLabel: UILabel!
+    var chosenGroupIndex = 0
     
     var chosenGroup = "Single Seat"
     var groupArray = ["Single Seat", "Row", "Column", "Random Group"]
@@ -31,18 +33,13 @@ class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         chosenGroup = groupArray[row]
+        chosenGroupIndex = row
         groupChosen = chosenGroup
     }
     
-    @IBAction func onSave(_ sender: Any) {
-        if (chosenGroup == "Random Group"){
-            performSegue(withIdentifier: "GroupPropertiesPopUp", sender: self)
-        }
-        else {
-            dismiss(animated: true)
-        }
+    @IBAction func onSave(_ sender: UIButton) {
+        dismiss(animated: true)
     }
-
     
     @IBAction func XButton(_ sender: UIButton) {
         dismiss(animated:true)
@@ -50,9 +47,12 @@ class GroupPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pickerView.selectRow(chosenGroupIndex, inComponent: 0, animated: true)
+        popUp.layer.cornerRadius = 10
     }
     
 }
+
 
 
 

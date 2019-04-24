@@ -13,6 +13,7 @@ class PopUpVC: UIViewController {
     @IBOutlet weak var Name: UITextField!
     @IBOutlet weak var Rows: UITextField!
     @IBOutlet weak var Columns: UITextField!
+    @IBOutlet weak var popUp: UIView!
     
    
     
@@ -25,14 +26,14 @@ class PopUpVC: UIViewController {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        self.view.layer.cornerRadius = 20
-        self.view.layer.masksToBounds = true
+        popUp.layer.cornerRadius = 10
     
         // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        popUp.layer.cornerRadius = 10
         // Dispose of any resources that can be recreated.
     }
     

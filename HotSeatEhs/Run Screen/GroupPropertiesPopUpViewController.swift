@@ -11,6 +11,7 @@ import UIKit
 class GroupPropertiesPopUpViewController: UIViewController {
     @IBOutlet weak var numberOfGroups: UITextField!
     
+    @IBOutlet weak var popUp: UIView!
     @IBOutlet weak var numberOfPeople: UITextField!
     var groups = ""
     var people = ""
@@ -41,7 +42,7 @@ class GroupPropertiesPopUpViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        popUp.layer.cornerRadius = 10
         // Do any additional setup after loading the view.
     }
 
