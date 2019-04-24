@@ -97,7 +97,7 @@
         if groupChosen == "Column"{
             
         }
-        if groupChosen == "RandomGroup" {
+        if groupChosen == "Random Group" {
             performSegue(withIdentifier: "GroupPropertiesPopUp", sender: self)
         }
     }
