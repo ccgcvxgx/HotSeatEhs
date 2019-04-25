@@ -28,6 +28,7 @@ class GroupPropertiesPopUpViewController: UIViewController {
             let per = tempPer.count
             let people = per / Int(numberOfGroups.text!)!
             numberOfPeople.text = String(people)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGroups"), object: nil)
             RunScreen().onSave(numberOfGroups, numberOfPeople)
         }
         if (numberOfPeople.text != ""){
@@ -36,8 +37,10 @@ class GroupPropertiesPopUpViewController: UIViewController {
             let people = per / Int(numberOfPeople.text!)!
             numberOfGroups.text = String(people)
             RunScreen().onSave(numberOfGroups, numberOfPeople)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGroups"), object: nil)
         }
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+        
+
         dismiss(animated: true)
     }
     override func viewDidLoad() {
