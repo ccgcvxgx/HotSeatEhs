@@ -24,6 +24,7 @@
         let name = list[classIndex].name
         perName.text = name
         colors = ["red","green","yellow","blue","purple","cyan","magenta","orange"]
+        NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -50,28 +51,17 @@
         }
         let color = s.backColor as! String
         
-        if (color == "red") {
-            cell.backgroundColor = UIColor.red
-            
-        }
-        else if (color == "white") {
-            cell.backgroundColor = UIColor.white
-            
-        }
-        else{
-            cell.backgroundColor = UIColor.brown
-            
-        }
+        cell.backgroundColor = stringToColor(color)
         
         return cell
     }
+
     
     func onSave (_ g: UITextField, _ p: UITextField) -> Void {
         groups = Int(g.text!)
         people = Int(p.text!)
         makeGroups(groups,people)
         //runCollection.reloadData()
-        NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroups"), object: nil)
     }
     
     @objc func loadGroup(notification: NSNotification){
