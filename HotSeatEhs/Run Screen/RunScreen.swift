@@ -23,8 +23,19 @@
         super.viewDidLoad()
         let name = list[classIndex].name
         perName.text = name
+        groups = 5
+        people = 7
         colors = ["red","green","yellow","blue","purple","cyan","magenta","orange"]
         NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
+    }
+    
+    
+    
+    
+    @objc func loadGroup(notification: NSNotification){
+        //load data here
+        makeGroups()
+        runCollection.reloadData()
     }
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -55,18 +66,11 @@
         
         return cell
     }
-
+    
     
     func onSave (_ g: UITextField, _ p: UITextField) -> Void {
         groups = Int(g.text!)
         people = Int(p.text!)
-        makeGroups(groups,people)
-        //runCollection.reloadData()
-    }
-    
-    @objc func loadGroup(notification: NSNotification){
-        //load data here
-        runCollection.reloadData()
     }
     
     @IBAction func runButton(_ sender: Any) {
@@ -107,7 +111,7 @@
             performSegue(withIdentifier: "GroupPropertiesPopUp", sender: self)
         }
     }
-    func makeGroups(_ groups: Int, _ people: Int){
+    func makeGroups(){
         var seats = list[classIndex].seatingChart
         for _ in 0...seats.count*5{
             let i = Int.random(in: 0...seats.count-1)
@@ -230,9 +234,6 @@
             Array(self[$0 ..< Swift.min($0 + size, count)])
         }
     }
-
-    
-    
  }
  
  
