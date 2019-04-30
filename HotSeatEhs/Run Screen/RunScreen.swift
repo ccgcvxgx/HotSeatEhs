@@ -27,6 +27,11 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = list[classIndex].name
+        let colNum = list[classIndex].columnDimension!
+        let s = collectionView.frame.size
+        let sC = (s.width) / (CGFloat(colNum + 2))
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: sC, height: sC)
         perName.text = name
         groups = 5
         people = 7
