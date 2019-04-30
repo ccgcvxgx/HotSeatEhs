@@ -11,9 +11,14 @@
  var groups: Int!
  var people: Int!
  var colors: [String]!
+
  
  class RunScreen: UIViewController, UICollectionViewDataSource {
     
+    @IBAction func history(_ sender: Any) {
+        whiteOut()
+        History().callHistory()
+    }
     @IBOutlet weak var perName: UILabel!
     
     @IBOutlet weak var runCollection: UICollectionView!
@@ -25,11 +30,15 @@
         perName.text = name
         groups = 5
         people = 7
-        colors = ["red","green","yellow","blue","purple","cyan","magenta","orange"]
+        colors = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray"]
         NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(loadHistory), name: NSNotification.Name(rawValue: "loadHistory"), object: nil)
     }
     
-    
+    @objc func loadHistory(notification: NSNotification){
+        //load data here
+        runCollection.reloadData()
+    }
     
     
     @objc func loadGroup(notification: NSNotification){
@@ -72,15 +81,32 @@
         groups = Int(g.text!)
         people = Int(p.text!)
     }
-    
-    @IBAction func runButton(_ sender: Any) {
-        
+    var rand: Int!
+    var rowStart : Int!
+    var runSeatCountOld = 0
+    var runSeatCountNew = 0
+    var runRowCountOld = 0
+    var runRowCountNew = 0
+    var runColCountOld = 0
+    var runColCountNew = 0
+    var runGroupCountOld = 0
+    var runGroupCountNew = 0
+    func whiteOut(){
         for i in stride(from: 0, through: list[classIndex].seatingChart.count-1, by: 1){
             list[classIndex].seatingChart[i].backColor = "white"
         }
+    }
+    
+    @IBAction func runButton(_ sender: Any) {
+        whiteOut()
         if groupChosen == "Single Seat" {
-            let rand = Int.random(in: 0...list[classIndex].seatingChart.count - 1)
+            if runSeatCountOld < runSeatCountNew{
+                historyS = rand
+                runSeatCountOld += 1
+            }
+            rand = Int.random(in: 0...list[classIndex].seatingChart.count - 1)
             let cell = list[classIndex].seatingChart[rand]
+            runSeatCountNew += 1
             cell.backColor = "red"
             runCollection.reloadData()
             //performSegue(withIdentifier: "SingleSeatSegue", sender: self)
@@ -88,24 +114,33 @@
         else if groupChosen == "Row" {
             
             let rand = Int.random(in: 0...list[classIndex].rowDimension - 1)
-            let rowStart = list[classIndex].columnDimension * rand
+            if runSeatCountOld < runSeatCountNew{
+                historyR = rowStart
+                runRowCountOld += 1
+            }
+            rowStart = list[classIndex].columnDimension * rand
             for i in 0...list[classIndex].columnDimension - 1 {
                 let cell = list[classIndex].seatingChart[rowStart+i]
                 cell.backColor = "red"
-                runCollection.reloadData()
             }
-            
+            runRowCountNew += 1
+            runCollection.reloadData()
             
             //performSegue(withIdentifier: "RowColumnSegue", sender: self)
         }
         else if groupChosen == "Column"{
-            let rand = Int.random(in: 0...list[classIndex].columnDimension - 1)
+            if runColCountOld < runColCountNew{
+                historyC = rand
+                runSeatCountOld += 1
+            }
+            rand = Int.random(in: 0...list[classIndex].columnDimension - 1)
+            runColCountNew += 1
             for i in 0...list[classIndex].rowDimension - 1 {
-                let cell = list[classIndex].seatingChart[rand+(7*i)]
+                let cell = list[classIndex].seatingChart[rand+(list[classIndex].columnDimension*i)]
                 print(cell.id)
                 cell.backColor = "red"
-                runCollection.reloadData()
             }
+            runCollection.reloadData()
         }
         else if groupChosen == "Random Group"{
             performSegue(withIdentifier: "GroupPropertiesPopUp", sender: self)
@@ -113,7 +148,7 @@
     }
     func makeGroups(){
         var seats = list[classIndex].seatingChart
-        for _ in 0...seats.count*5{
+        for _ in 0...seats.count*list[classIndex].rowDimension{
             let i = Int.random(in: 0...seats.count-1)
             let temp = seats[i]
             seats.remove(at: i)
@@ -121,14 +156,20 @@
         }
         let seatGroups = seats.chunked(into: people)
         var holder = [String()]
-        for i in seatGroups{
+        for _ in seatGroups{
             for x in 0...seatGroups.count-1{
                 if(colors.count == 0){
                     holder.removeFirst()
                     colors.append(contentsOf: holder)
+                    
+                    if runGroupCountOld < runGroupCountNew{
+                        historyG = list[classIndex].seatingChart
+                        runGroupCountOld += 1
+                    }
+                    runGroupCountNew += 1
                     return
                 }
-                var part = Int.random(in: 0...colors.count-1)
+                let part = Int.random(in: 0...colors.count-1)
                 let color = colors[part]
                 holder.append(colors.remove(at: part))
                 for z in seatGroups[x]{

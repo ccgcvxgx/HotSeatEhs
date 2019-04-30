@@ -23,6 +23,7 @@
 		89AA752E21BADED0006FBB07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89AA752C21BADED0006FBB07 /* LaunchScreen.storyboard */; };
 		89AA753921BADED0006FBB07 /* HotSeatEhsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA753821BADED0006FBB07 /* HotSeatEhsTests.swift */; };
 		89AA754421BADED0006FBB07 /* HotSeatEhsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */; };
+		89B52F862273618D0037BC3B /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89B52F852273618D0037BC3B /* History.swift */; };
 		89CDED1D221C686D00782735 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89CDED1C221C686D00782735 /* Global.swift */; };
 		96571A6021E8222700D304D7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A5F21E8222700D304D7 /* HomeViewController.swift */; };
 		96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */; };
@@ -71,6 +72,7 @@
 		89AA753F21BADED0006FBB07 /* HotSeatEhsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HotSeatEhsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		89AA754321BADED0006FBB07 /* HotSeatEhsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSeatEhsUITests.swift; sourceTree = "<group>"; };
 		89AA754521BADED0006FBB07 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89B52F852273618D0037BC3B /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		89CDED1C221C686D00782735 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		96571A5F21E8222700D304D7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		96571A6121E8224F00D304D7 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				6504DEEF21D8210F00B7C040 /* RunScreen.swift */,
+				89B52F852273618D0037BC3B /* History.swift */,
 				EB07213C2215D45000DDA6AF /* GroupPopUpViewController.swift */,
 				652059B2223957E900FD1D68 /* RunScreenCollectionViewCell.swift */,
 				65E98E4A225E48B400F787C6 /* GroupPropertiesPopUpViewController.swift */,
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89B52F862273618D0037BC3B /* History.swift in Sources */,
 				6554AA0821DFC51300C9EC64 /* EditScreenCollectionViewCell.swift in Sources */,
 				89AA752621BADECF006FBB07 /* ModelController.swift in Sources */,
 				96571A6221E8224F00D304D7 /* HomeTableViewCell.swift in Sources */,

@@ -166,6 +166,13 @@
                                     <action selector="addPeriod:" destination="h3v-eB-9rY" eventType="touchUpInside" id="Afg-hB-2Aa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="swipe to edit/delete, select to run" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVN-e4-9yR">
+                                <rect key="frame" x="20" y="206" width="262" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392156862748" green="0.81960784313725488" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -185,6 +192,7 @@
                     <navigationItem key="navigationItem" id="J2J-k1-vkl"/>
                     <connections>
                         <outlet property="addButton" destination="1Vi-Ee-vIp" id="HrA-h7-bDP"/>
+                        <outlet property="introductionLabel" destination="MVN-e4-9yR" id="50t-ID-Lhi"/>
                         <outlet property="tableView" destination="JnC-9X-Epb" id="MdS-8N-t5Z"/>
                         <segue destination="5Dq-pP-aOQ" kind="show" identifier="HomeRun" id="8J3-eq-F4u"/>
                         <segue destination="0qv-fa-BLY" kind="show" identifier="HomeEdit" id="6hb-5t-QJT"/>
@@ -192,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pig-18-J9I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="289" y="-332"/>
+            <point key="canvasLocation" x="288.66906474820144" y="-332.37410071942446"/>
         </scene>
         <!--Edit Screen-->
         <scene sceneID="tVJ-Xp-jIT">
@@ -426,6 +434,14 @@
                                     <outlet property="dataSource" destination="5Dq-pP-aOQ" id="TLV-E7-FwC"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evR-jB-S6o">
+                                <rect key="frame" x="925" y="102" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="history:" destination="5Dq-pP-aOQ" eventType="touchUpInside" id="ww0-Hv-Lg9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392156862748" green="0.81960784313725488" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

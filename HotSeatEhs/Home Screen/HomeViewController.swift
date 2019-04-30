@@ -15,6 +15,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
+
+    @IBOutlet weak var introductionLabel: UILabel!
     
     @IBOutlet weak var addButton: UIButton!
     @IBAction func addPeriod(_ sender: Any) {
@@ -40,7 +42,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             ClassArray().archive(fileName: "HomeScreen")
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
-            }
+        }
         //return [delete]
         
         let edit = UITableViewRowAction(style: .default, title: "Edit") { (action, indexPath) in
@@ -57,13 +59,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "HomeEdit" {
-            _ = self.tableView.indexPathForSelectedRow
-            _ = segue.destination as! EditScreen
-            
-        }
-    }*/
-
+     if segue.identifier == "HomeEdit" {
+     _ = self.tableView.indexPathForSelectedRow
+     _ = segue.destination as! EditScreen
+     
+     }
+     }*/
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ClassArray().restore(fileName: "HomeScreen")
@@ -76,7 +78,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    
     
     @objc func loadList(notification: NSNotification){
         //load data here
@@ -109,5 +111,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let per = list[indexPath.row]
         classIndex = list.firstIndex(of: per)!
         performSegue(withIdentifier: "HomeRun", sender: self)
+        introductionLabel.text = ""
     }
 }
