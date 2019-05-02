@@ -19,31 +19,36 @@ class History: NSObject, Codable{
         super.init()
     }
     func callHistory(){
-        if groupChosen == "Single Seat"{
-            list[classIndex].seatingChart[historyS].backColor = "red"
-        }
-        else if groupChosen == "Row"{
-            for i in 0...list[classIndex].columnDimension - 1 {
-                let cell = list[classIndex].seatingChart[historyR+i]
-                cell.backColor = "red"
-            }
-        }
-        else if groupChosen == "Column"{
-            for i in 0...list[classIndex].rowDimension - 1 {
-                let cell = list[classIndex].seatingChart[historyC+(list[classIndex].columnDimension*i)]
-                print(cell.id)
-                cell.backColor = "red"
-            }
-        }
-        else if groupChosen == "Random Group"{
+        if groupChosen == "Random Group"{
             for i in 0...historyG.count-1{
+                print(list[classIndex].seatingChart[i].backColor)
                 list[classIndex].seatingChart[i] = historyG[i]
-                print(historyG[i].backColor)
                 print(list[classIndex].seatingChart[i].backColor)
             }
             
         }
+            
+        else{
+            RunScreen().whiteOut()
+            if groupChosen == "Single Seat"{
+                list[classIndex].seatingChart[historyS].backColor = "red"
+            }
+            else if groupChosen == "Row"{
+                for i in 0...list[classIndex].columnDimension - 1 {
+                    let cell = list[classIndex].seatingChart[historyR+i]
+                    cell.backColor = "red"
+                }
+            }
+            else if groupChosen == "Column"{
+                for i in 0...list[classIndex].rowDimension - 1 {
+                    let cell = list[classIndex].seatingChart[historyC+(list[classIndex].columnDimension*i)]
+                    print(cell.id)
+                    cell.backColor = "red"
+                }
+            }
+        }
+        
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadHistory"), object: nil)
-    
+        
     }
 }

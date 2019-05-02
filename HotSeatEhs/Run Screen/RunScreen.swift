@@ -153,6 +153,13 @@
     }
     func makeGroups(){
         var seats = list[classIndex].seatingChart
+        
+        if runGroupCountOld < runGroupCountNew{
+            historyG = list[classIndex].seatingChart
+            runGroupCountOld += 1
+        }
+        runGroupCountNew += 1
+        
         for _ in 0...seats.count*list[classIndex].rowDimension{
             let i = Int.random(in: 0...seats.count-1)
             let temp = seats[i]
@@ -167,11 +174,6 @@
                     holder.removeFirst()
                     colors.append(contentsOf: holder)
                     
-                    if runGroupCountOld < runGroupCountNew{
-                        historyG = list[classIndex].seatingChart
-                        runGroupCountOld += 1
-                    }
-                    runGroupCountNew += 1
                     return
                 }
                 let part = Int.random(in: 0...colors.count-1)
