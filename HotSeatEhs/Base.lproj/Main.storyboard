@@ -393,8 +393,16 @@
                                     <segue destination="LRM-gc-4Jl" kind="presentation" modalPresentationStyle="overCurrentContext" id="qQ0-pO-tLD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evR-jB-S6o">
+                                <rect key="frame" x="925" y="102" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="history:" destination="5Dq-pP-aOQ" eventType="touchUpInside" id="ww0-Hv-Lg9"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-og-MCh">
-                                <rect key="frame" x="275" y="252" width="496" height="441"/>
+                                <rect key="frame" x="210" y="204" width="596" height="490"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70980392156862748" green="0.81960784313725488" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3mN-bF-xXL">
@@ -434,14 +442,6 @@
                                     <outlet property="dataSource" destination="5Dq-pP-aOQ" id="TLV-E7-FwC"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evR-jB-S6o">
-                                <rect key="frame" x="925" y="102" width="50" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="History"/>
-                                <connections>
-                                    <action selector="history:" destination="5Dq-pP-aOQ" eventType="touchUpInside" id="ww0-Hv-Lg9"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.70980392156862748" green="0.81960784313725488" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>

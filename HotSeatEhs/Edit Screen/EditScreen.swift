@@ -23,6 +23,11 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let per = list[classIndex]
         let name = per.name
         pName.text = name
+        let colNum = list[classIndex].columnDimension!
+        let s = CollectionView.frame.size
+        let sC = (s.width) / (CGFloat(colNum + 4))
+        let layout = CollectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: sC, height: sC)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

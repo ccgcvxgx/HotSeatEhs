@@ -27,12 +27,18 @@
     override func viewDidLoad() {
         super.viewDidLoad()
         let name = list[classIndex].name
+        perName.text = name
         let colNum = list[classIndex].columnDimension!
         let s = collectionView.frame.size
-        let sC = (s.width) / (CGFloat(colNum + 2))
+        let sC: CGFloat
+        if colNum <= 8 {
+            sC = (s.width) / (CGFloat(colNum + 2))
+        }
+        else {
+            sC = (s.width) / (CGFloat(colNum + 3))
+        }
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: sC, height: sC)
-        perName.text = name
         groups = 5
         people = 7
         colors = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray"]
