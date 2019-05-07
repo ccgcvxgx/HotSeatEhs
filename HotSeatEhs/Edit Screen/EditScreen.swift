@@ -25,7 +25,13 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         pName.text = name
         let colNum = list[classIndex].columnDimension!
         let s = CollectionView.frame.size
-        let sC = (s.width) / (CGFloat(colNum + 4))
+        let sC: CGFloat
+        if colNum <= 9 {
+            sC = (s.width) / (CGFloat(colNum + 4))
+        }
+        else {
+            sC = (s.width) / (CGFloat(colNum + 5))
+        }
         let layout = CollectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: sC, height: sC)
     }

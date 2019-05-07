@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dqe-be-Fep">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dqe-be-Fep">
     <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -377,7 +377,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Front" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qC-7f-dd7">
-                                <rect key="frame" x="544.5" y="743" width="73" height="25"/>
+                                <rect key="frame" x="518" y="743" width="73" height="25"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -402,7 +402,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ixF-og-MCh">
-                                <rect key="frame" x="210" y="204" width="596" height="490"/>
+                                <rect key="frame" x="172" y="164" width="671" height="535"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.70980392156862748" green="0.81960784313725488" blue="0.4823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3mN-bF-xXL">
@@ -452,10 +452,10 @@
                             <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="9qC-7f-dd7" secondAttribute="bottom" constant="66" id="LX8-rw-cQt"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="ssR-dM-E15" secondAttribute="bottom" constant="30" id="XU6-86-9Ow"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="trailing" secondItem="crj-GV-0Jw" secondAttribute="trailing" constant="37" id="Z2Z-3e-mpE"/>
-                            <constraint firstItem="crj-GV-0Jw" firstAttribute="leading" secondItem="9qC-7f-dd7" secondAttribute="trailing" constant="310.5" id="goV-fN-2yq"/>
+                            <constraint firstItem="crj-GV-0Jw" firstAttribute="leading" secondItem="9qC-7f-dd7" secondAttribute="trailing" constant="336" id="goV-fN-2yq"/>
                             <constraint firstItem="crj-GV-0Jw" firstAttribute="top" secondItem="reV-76-rMf" secondAttribute="top" constant="630" id="lL9-on-JRw"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="trailing" secondItem="OUH-oM-BmR" secondAttribute="trailing" constant="389" id="lf7-75-xX1"/>
-                            <constraint firstItem="9qC-7f-dd7" firstAttribute="leading" secondItem="ssR-dM-E15" secondAttribute="trailing" constant="304.5" id="ncv-Cj-LVr"/>
+                            <constraint firstItem="9qC-7f-dd7" firstAttribute="leading" secondItem="ssR-dM-E15" secondAttribute="trailing" constant="316" id="ncv-Cj-LVr"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="crj-GV-0Jw" secondAttribute="bottom" constant="30" id="yWC-8t-7h8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="reV-76-rMf"/>

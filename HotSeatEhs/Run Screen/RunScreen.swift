@@ -33,7 +33,7 @@ let color = UIColor(named: "SillyBlue")
         let colNum = list[classIndex].columnDimension!
         let s = collectionView.frame.size
         let sC: CGFloat
-        if colNum <= 8 {
+        if colNum <= 9 {
             sC = (s.width) / (CGFloat(colNum + 2))
         }
         else {
