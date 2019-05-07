@@ -33,11 +33,11 @@ let color = UIColor(named: "SillyBlue")
         let colNum = list[classIndex].columnDimension!
         let s = collectionView.frame.size
         let sC: CGFloat
-        if colNum <= 9 {
-            sC = (s.width) / (CGFloat(colNum + 2))
+        if colNum != 6 {
+            sC = (s.width) / (CGFloat(colNum) + 2)
         }
         else {
-            sC = (s.width) / (CGFloat(colNum + 3))
+            sC = (s.width) / (CGFloat(colNum) + 1)
         }
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: sC, height: sC)
