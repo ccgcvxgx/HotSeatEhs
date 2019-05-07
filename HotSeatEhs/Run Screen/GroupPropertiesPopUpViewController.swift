@@ -23,15 +23,16 @@ class GroupPropertiesPopUpViewController: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        if(numberOfGroups.text == "1" || numberOfGroups.text == "2" || numberOfGroups.text == "3" || numberOfGroups.text == "4" || numberOfGroups.text == "5" || numberOfGroups.text == "6" || numberOfGroups.text == "7" || numberOfGroups.text == "8" || numberOfGroups.text == "9" || numberOfGroups.text == "10" || numberOfGroups.text == "11" || numberOfGroups.text == "12" || numberOfGroups.text == "13" || numberOfGroups.text == "14" || numberOfGroups.text == "15" || numberOfGroups.text == "16" || numberOfGroups.text == "17"){
+        if(numberOfGroups.text == "1" || numberOfGroups.text == "2" || numberOfGroups.text == "3" || numberOfGroups.text == "4" || numberOfGroups.text == "5" || numberOfGroups.text == "6" || numberOfGroups.text == "7" || numberOfGroups.text == "8" || numberOfGroups.text == "9" || numberOfGroups.text == "10" || numberOfGroups.text == "11" || numberOfGroups.text == "12" || numberOfGroups.text == "13" || numberOfGroups.text == "14" || numberOfGroups.text == "15" || numberOfGroups.text == "16" || numberOfGroups.text == "17" || numberOfGroups.text == "18" || numberOfGroups.text == "19" || numberOfGroups.text == "20" || numberOfGroups.text == "21" || numberOfGroups.text == "22" || numberOfGroups.text == "23" || numberOfGroups.text == "24" || numberOfGroups.text == "25"){
             let tempPer = list[classIndex].seatingChart
             let per = tempPer.count
             let people = per / Int(numberOfGroups.text!)!
             numberOfPeople.text = String(people)
+            
             RunScreen().onSave(numberOfGroups, numberOfPeople)
         }
         
-        if (numberOfPeople.text == "1" || numberOfPeople.text == "2" || numberOfPeople.text == "3" || numberOfPeople.text == "4" || numberOfPeople.text == "5" || numberOfPeople.text == "6" || numberOfPeople.text == "7" || numberOfPeople.text == "8" || numberOfPeople.text == "9" || numberOfPeople.text == "10" || numberOfPeople.text == "11" || numberOfPeople.text == "12" || numberOfPeople.text == "13" || numberOfPeople.text == "14" || numberOfPeople.text == "15" || numberOfPeople.text == "16" || numberOfPeople.text == "17"){
+        if (numberOfPeople.text == "1" || numberOfPeople.text == "2" || numberOfPeople.text == "3" || numberOfPeople.text == "4" || numberOfPeople.text == "5" || numberOfPeople.text == "6" || numberOfPeople.text == "7" || numberOfPeople.text == "8" || numberOfPeople.text == "9" || numberOfPeople.text == "10" || numberOfPeople.text == "11" || numberOfPeople.text == "12" || numberOfPeople.text == "13" || numberOfPeople.text == "14" || numberOfPeople.text == "15" || numberOfPeople.text == "16" || numberOfPeople.text == "17" || numberOfPeople.text == "18" || numberOfPeople.text == "19" || numberOfPeople.text == "20"){
             let tempPer = list[classIndex].seatingChart
             let per = tempPer.count
             let people = per / Int(numberOfPeople.text!)!
@@ -40,7 +41,7 @@ class GroupPropertiesPopUpViewController: UIViewController {
         }
         
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
-        if(numberOfGroups.text == "1" || numberOfGroups.text == "2" || numberOfGroups.text == "3" || numberOfGroups.text == "4" || numberOfGroups.text == "5" || numberOfGroups.text == "6" || numberOfGroups.text == "7" || numberOfGroups.text == "8" || numberOfGroups.text == "9" || numberOfGroups.text == "10" || numberOfGroups.text == "11" || numberOfGroups.text == "12" || numberOfGroups.text == "13" || numberOfGroups.text == "14" || numberOfGroups.text == "15" || numberOfGroups.text == "16" || numberOfGroups.text == "17")
+        if(numberOfGroups.text == "1" || numberOfGroups.text == "2" || numberOfGroups.text == "3" || numberOfGroups.text == "4" || numberOfGroups.text == "5" || numberOfGroups.text == "6" || numberOfGroups.text == "7" || numberOfGroups.text == "8" || numberOfGroups.text == "9" || numberOfGroups.text == "10" || numberOfGroups.text == "11" || numberOfGroups.text == "12" || numberOfGroups.text == "13" || numberOfGroups.text == "14" || numberOfGroups.text == "15" || numberOfGroups.text == "16" || numberOfGroups.text == "17" || numberOfGroups.text == "18" || numberOfGroups.text == "19" || numberOfGroups.text == "20" || numberOfGroups.text == "21" || numberOfGroups.text == "22" || numberOfGroups.text == "23" || numberOfGroups.text == "24" || numberOfGroups.text == "25")
         {
             dismiss(animated: true)
         }

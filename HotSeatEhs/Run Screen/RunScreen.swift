@@ -11,6 +11,8 @@
  var groups: Int!
  var people: Int!
  var colors: [String]!
+ 
+let color = UIColor(named: "SillyBlue")
 
  
  class RunScreen: UIViewController, UICollectionViewDataSource {
@@ -41,7 +43,7 @@
         layout.itemSize = CGSize(width: sC, height: sC)
         groups = 5
         people = 7
-        colors = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray"]
+        colors = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray","SillyBlue", "MacNCheese", "BabyPink", "Lilac", "Sunset", "Scarlet", "Forest", "Spring", "BloodRed", "Sky", "Bear", "Kelly"]
         NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadHistory), name: NSNotification.Name(rawValue: "loadHistory"), object: nil)
     }
@@ -235,6 +237,42 @@
         else if (color == UIColor.lightGray) {
             chosen = "lightGray"
         }
+        else if (color == UIColor(named: "SillyBlue")) {
+            chosen = "SillyBlue"
+        }
+        else if (color == UIColor(named: "MacNCheese")) {
+            chosen = "MacNCheese"
+        }
+        else if (color == UIColor(named: "BabyPink")) {
+            chosen = "BabyPink"
+        }
+        else if (color == UIColor(named: "Lilac")) {
+            chosen = "Lilac"
+        }
+        else if (color == UIColor(named: "Sunset")) {
+            chosen = "Sunset"
+        }
+        else if (color == UIColor(named: "Scarlet")) {
+            chosen = "Scarlet"
+        }
+        else if (color == UIColor(named: "Forest")) {
+            chosen = "Forest"
+        }
+        else if (color == UIColor(named: "Spring")) {
+            chosen = "Spring"
+        }
+        else if (color == UIColor(named: "BloodRed")) {
+            chosen = "BloodRed"
+        }
+        else if (color == UIColor(named: "Sky")) {
+            chosen = "Sky"
+        }
+        else if (color == UIColor(named: "Bear")) {
+            chosen = "Bear"
+        }
+        else if (color == UIColor(named: "Kelly")) {
+            chosen = "Kelly"
+        }
         else{
             chosen = "orange"
         }
@@ -272,6 +310,42 @@
         }
         else if (color == "lightGray") {
             chosen = UIColor.lightGray
+        }
+        else if (color == "SillyBlue") {
+            chosen = UIColor(named: "SillyBlue")!
+        }
+        else if (color == "MacNCheese") {
+            chosen = UIColor(named: "MacNCheese")!
+        }
+        else if (color == "BabyPink") {
+            chosen = UIColor(named: "BabyPink")!
+        }
+        else if (color == "Lilac") {
+            chosen = UIColor(named: "Lilac")!
+        }
+        else if (color == "Sunset") {
+            chosen = UIColor(named: "Sunset")!
+        }
+        else if (color == "Scarlet") {
+            chosen = UIColor(named: "Scarlet")!
+        }
+        else if (color == "Forest") {
+            chosen = UIColor(named: "Forest")!
+        }
+        else if (color == "Spring") {
+            chosen = UIColor(named: "Spring")!
+        }
+        else if (color == "BloodRed") {
+            chosen = UIColor(named: "BloodRed")!
+        }
+        else if (color == "Sky") {
+            chosen = UIColor(named: "Sky")!
+        }
+        else if (color == "Bear") {
+            chosen = UIColor(named: "Bear")!
+        }
+        else if (color == "Kelly") {
+            chosen = UIColor(named: "Kelly")!
         }
         else{
             chosen = UIColor.orange
