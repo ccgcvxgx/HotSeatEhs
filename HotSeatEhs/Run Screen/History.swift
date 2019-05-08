@@ -11,7 +11,7 @@ import Foundation
 var historyS: Int!
 var historyR: Int!
 var historyC: Int!
-var historyG: [Seat]!
+
 
 class History: NSObject, Codable{
     
@@ -20,12 +20,11 @@ class History: NSObject, Codable{
     }
     func callHistory(){
         if groupChosen == "Random Group"{
-            for i in 0...historyG.count-1{
-                print(list[classIndex].seatingChart[i].backColor)
-                list[classIndex].seatingChart[i] = historyG[i]
-                print(list[classIndex].seatingChart[i].backColor)
+            print(list[classIndex].seatingChart[5].backColor)
+            print(historyG.seatingChart[5].backColor)
+            for i in 0...historyG.seatingChart.count-1{
+                list[classIndex].seatingChart[i] = historyG.seatingChart[i]
             }
-            
         }
             
         else{

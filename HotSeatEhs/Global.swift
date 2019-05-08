@@ -12,4 +12,5 @@ var classIndex = 0
 var seatIndex = 0
 var seatList = [Seat]()
 var groupChosen = "Single Seat"
+var historyG = Period(name: "testing", rows: list[0].rowDimension, columns: list[0].columnDimension)
 

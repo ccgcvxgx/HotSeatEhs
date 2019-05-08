@@ -18,7 +18,6 @@ let color = UIColor(named: "SillyBlue")
  class RunScreen: UIViewController, UICollectionViewDataSource {
     
     @IBAction func history(_ sender: Any) {
-        whiteOut()
         History().callHistory()
     }
     @IBOutlet weak var perName: UILabel!
@@ -111,8 +110,8 @@ let color = UIColor(named: "SillyBlue")
     }
     
     @IBAction func runButton(_ sender: Any) {
-        whiteOut()
         if groupChosen == "Single Seat" {
+            whiteOut()
             if runSeatCountOld < runSeatCountNew{
                 historyS = rand
                 runSeatCountOld += 1
@@ -125,7 +124,7 @@ let color = UIColor(named: "SillyBlue")
             //performSegue(withIdentifier: "SingleSeatSegue", sender: self)
         }
         else if groupChosen == "Row" {
-            
+            whiteOut()
             let rand = Int.random(in: 0...list[classIndex].rowDimension - 1)
             if runSeatCountOld < runSeatCountNew{
                 historyR = rowStart
@@ -142,6 +141,7 @@ let color = UIColor(named: "SillyBlue")
             //performSegue(withIdentifier: "RowColumnSegue", sender: self)
         }
         else if groupChosen == "Column"{
+            whiteOut()
             if runColCountOld < runColCountNew{
                 historyC = rand
                 runSeatCountOld += 1
@@ -161,13 +161,18 @@ let color = UIColor(named: "SillyBlue")
     }
     func makeGroups(){
         var seats = list[classIndex].seatingChart
-        
+        print(runGroupCountOld)
+        print(runGroupCountNew)
         if runGroupCountOld < runGroupCountNew{
-            historyG = list[classIndex].seatingChart
+            for i in 0...historyG.seatingChart.count-1{
+                historyG.seatingChart[i].backColor = list[classIndex].seatingChart[i].backColor
+            }
+            print(historyG.seatingChart[5].backColor + "h")
             runGroupCountOld += 1
         }
         runGroupCountNew += 1
-        
+        print(runGroupCountOld)
+        print(runGroupCountNew)
         for _ in 0...seats.count*list[classIndex].rowDimension{
             let i = Int.random(in: 0...seats.count-1)
             let temp = seats[i]
@@ -176,32 +181,31 @@ let color = UIColor(named: "SillyBlue")
         }
         let seatGroups = seats.chunked(into: people)
         var holder = [String()]
-        for _ in seatGroups{
-            for x in 0...seatGroups.count-1{
-                if(colors.count == 0){
-                    holder.removeFirst()
-                    colors.append(contentsOf: holder)
-                    
-                    return
-                }
-                let part = Int.random(in: 0...colors.count-1)
-                let color = colors[part]
-                holder.append(colors.remove(at: part))
-                for z in seatGroups[x]{
-                    z.backColor = color
-                }
-                print(holder)
+        print(list[classIndex].seatingChart[5].backColor + "3")
+        for x in 0...seatGroups.count-1{
+            if(colors.count == 0){
+                holder.removeFirst()
+                colors.append(contentsOf: holder)
+                return
+            }
+            let part = Int.random(in: 0...colors.count-1)
+            let color = colors[part]
+            holder.append(colors.remove(at: part))
+            for z in seatGroups[x]{
+                z.backColor = color
             }
         }
-        for i in list[classIndex].seatingChart{
-            for z in seatGroups{
-                for x in z{
-                    if i.id == x.id{
-                        i.backColor = x.backColor
+        print(list[classIndex].seatingChart[5].backColor + "4")
+        for i in 0...list[classIndex].seatingChart.count-1{
+            for z in 0...seatGroups.count-1{
+                for x in 0...z{
+                    if list[classIndex].seatingChart[i].id == seatGroups[z][x].id{
+                        list[classIndex].seatingChart[i].backColor = seatGroups[z][x].backColor
                     }
                 }
             }
         }
+        print(list[classIndex].seatingChart[5].backColor + "5")
         
     }
     
