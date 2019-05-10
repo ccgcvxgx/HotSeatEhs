@@ -17,6 +17,9 @@ let color = UIColor(named: "SillyBlue")
  
  class RunScreen: UIViewController, UICollectionViewDataSource {
     
+    @IBOutlet weak var runButton: UIButton!
+    @IBOutlet weak var groupType: UIButton!
+    @IBOutlet weak var history: UIButton!
     @IBAction func history(_ sender: Any) {
         History().callHistory()
     }
@@ -27,6 +30,9 @@ let color = UIColor(named: "SillyBlue")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        history.layer.cornerRadius = 5
+        groupType.layer.cornerRadius = 5
+        runButton.layer.cornerRadius = 5
         let name = list[classIndex].name
         perName.text = name
         let colNum = list[classIndex].columnDimension!
@@ -45,6 +51,8 @@ let color = UIColor(named: "SillyBlue")
         colors = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray","SillyBlue", "MacNCheese", "BabyPink", "Lilac", "Sunset", "Scarlet", "Forest", "Spring", "BloodRed", "Sky", "Bear", "Kelly"]
         NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadHistory), name: NSNotification.Name(rawValue: "loadHistory"), object: nil)
+    
+        
     }
     
     @objc func loadHistory(notification: NSNotification){
@@ -161,18 +169,15 @@ let color = UIColor(named: "SillyBlue")
     }
     func makeGroups(){
         var seats = list[classIndex].seatingChart
-        print(runGroupCountOld)
-        print(runGroupCountNew)
         if runGroupCountOld < runGroupCountNew{
-            for i in 0...historyG.seatingChart.count-1{
+            historyG = Period(name: "testing", rows: list[classIndex].rowDimension, columns: list[classIndex].columnDimension)
+            for i in 0...list[classIndex].seatingChart.count-1{
                 historyG.seatingChart[i].backColor = list[classIndex].seatingChart[i].backColor
             }
             print(historyG.seatingChart[5].backColor + "h")
             runGroupCountOld += 1
         }
         runGroupCountNew += 1
-        print(runGroupCountOld)
-        print(runGroupCountNew)
         for _ in 0...seats.count*list[classIndex].rowDimension{
             let i = Int.random(in: 0...seats.count-1)
             let temp = seats[i]
@@ -196,11 +201,11 @@ let color = UIColor(named: "SillyBlue")
             }
         }
         print(list[classIndex].seatingChart[5].backColor + "4")
-        for i in 0...list[classIndex].seatingChart.count-1{
-            for z in 0...seatGroups.count-1{
-                for x in 0...z{
-                    if list[classIndex].seatingChart[i].id == seatGroups[z][x].id{
-                        list[classIndex].seatingChart[i].backColor = seatGroups[z][x].backColor
+        for seat in list[classIndex].seatingChart{
+            for group in seatGroups{
+                for x in 0...group.count-1{
+                    if seat.id == group[x].id{
+                        seat.backColor = group[x].backColor
                     }
                 }
             }

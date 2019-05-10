@@ -382,18 +382,18 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssR-dM-E15">
                                 <rect key="frame" x="36" y="684" width="166" height="99"/>
-                                <color key="backgroundColor" red="0.66385282553232905" green="0.7639893197839378" blue="0.45893002458381088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
-                                <state key="normal" title="Group Type">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Group Type"/>
                                 <connections>
                                     <segue destination="LRM-gc-4Jl" kind="presentation" modalPresentationStyle="overCurrentContext" id="qQ0-pO-tLD"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evR-jB-S6o">
-                                <rect key="frame" x="925" y="102" width="50" height="30"/>
+                                <rect key="frame" x="888" y="105" width="103" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
                                 <state key="normal" title="History"/>
                                 <connections>
                                     <action selector="history:" destination="5Dq-pP-aOQ" eventType="touchUpInside" id="ww0-Hv-Lg9"/>
@@ -454,7 +454,7 @@
                             <constraint firstItem="ssR-dM-E15" firstAttribute="leading" secondItem="reV-76-rMf" secondAttribute="leading" constant="36" id="IZV-c3-893"/>
                             <constraint firstItem="OUH-oM-BmR" firstAttribute="top" secondItem="reV-76-rMf" secondAttribute="top" constant="18" id="LA3-J6-v9B"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="9qC-7f-dd7" secondAttribute="bottom" constant="51" id="LX8-rw-cQt"/>
-                            <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="ssR-dM-E15" secondAttribute="bottom" constant="30" id="XU6-86-9Ow"/>
+                            <constraint firstItem="reV-76-rMf" firstAttribute="bottom" secondItem="ssR-dM-E15" secondAttribute="bottom" constant="35" id="XU6-86-9Ow"/>
                             <constraint firstItem="reV-76-rMf" firstAttribute="trailing" secondItem="crj-GV-0Jw" secondAttribute="trailing" constant="37" id="Z2Z-3e-mpE"/>
                             <constraint firstItem="crj-GV-0Jw" firstAttribute="leading" secondItem="9qC-7f-dd7" secondAttribute="trailing" constant="335" id="goV-fN-2yq"/>
                             <constraint firstItem="crj-GV-0Jw" firstAttribute="top" secondItem="reV-76-rMf" secondAttribute="top" constant="630" id="lL9-on-JRw"/>
@@ -466,7 +466,10 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ixF-og-MCh" id="xw1-Pv-UOm"/>
+                        <outlet property="groupType" destination="ssR-dM-E15" id="MLh-Zn-IdK"/>
+                        <outlet property="history" destination="evR-jB-S6o" id="5CF-tD-CmO"/>
                         <outlet property="perName" destination="OUH-oM-BmR" id="5CJ-iD-4TJ"/>
+                        <outlet property="runButton" destination="crj-GV-0Jw" id="f24-KM-zj9"/>
                         <outlet property="runCollection" destination="ixF-og-MCh" id="rJD-Qb-iOO"/>
                         <segue destination="dew-57-kKZ" kind="presentation" identifier="GroupPropertiesPopUp" modalPresentationStyle="overCurrentContext" id="WIj-X0-8Ky"/>
                     </connections>
