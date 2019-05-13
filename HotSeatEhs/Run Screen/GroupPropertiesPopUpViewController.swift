@@ -47,6 +47,9 @@ class GroupPropertiesPopUpViewController: UIViewController {
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
     }
+    @IBAction func XButton(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         popUp.layer.cornerRadius = 10
