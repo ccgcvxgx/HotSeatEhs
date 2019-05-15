@@ -11,6 +11,7 @@
  var groups: Int!
  var people: Int!
  var colors: [String]!
+ var backColorSave: [String]!
  
 let color = UIColor(named: "SillyBlue")
 
@@ -49,6 +50,7 @@ let color = UIColor(named: "SillyBlue")
         groups = 5
         people = 7
         colors = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray","SillyBlue", "MacNCheese", "BabyPink", "Lilac", "Sunset", "Scarlet", "Forest", "Spring", "BloodRed", "Sky", "Bear", "Kelly"]
+        backColorSave = ["red","green","yellow","blue","purple","cyan","magenta","orange","lightGray","SillyBlue", "MacNCheese", "BabyPink", "Lilac", "Sunset", "Scarlet", "Forest", "Spring", "BloodRed", "Sky", "Bear", "Kelly"]
         NotificationCenter.default.addObserver(self, selector: #selector(loadGroup), name: NSNotification.Name(rawValue: "loadGroup"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(loadHistory), name: NSNotification.Name(rawValue: "loadHistory"), object: nil)
     
@@ -188,11 +190,6 @@ let color = UIColor(named: "SillyBlue")
         var holder = [String()]
         print(list[classIndex].seatingChart[5].backColor + "3")
         for x in 0...seatGroups.count-1{
-            if(colors.count == 0){
-                holder.removeFirst()
-                colors.append(contentsOf: holder)
-                return
-            }
             let part = Int.random(in: 0...colors.count-1)
             let color = colors[part]
             holder.append(colors.remove(at: part))
@@ -211,7 +208,12 @@ let color = UIColor(named: "SillyBlue")
             }
         }
         print(list[classIndex].seatingChart[5].backColor + "5")
+        colorupdate()
         
+    }
+    
+    func colorupdate(){
+            colors = backColorSave
     }
     
     func colorToString(_ color: UIColor)->String{
@@ -285,6 +287,7 @@ let color = UIColor(named: "SillyBlue")
         else{
             chosen = "orange"
         }
+        colorupdate()
         return chosen
     }
     
@@ -359,6 +362,7 @@ let color = UIColor(named: "SillyBlue")
         else{
             chosen = UIColor.orange
         }
+        colorupdate()
         return chosen
     }
     
