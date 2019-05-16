@@ -26,8 +26,8 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         let colNum = list[classIndex].columnDimension!
         let s = CollectionView.frame.size
         let sC: CGFloat
-        if colNum <= 9 {
-            sC = (s.width) / (CGFloat(colNum + 4))
+        if colNum < 9 {
+            sC = (s.width) / (CGFloat(colNum + 3))
         }
         else {
             sC = (s.width) / (CGFloat(colNum + 5))
