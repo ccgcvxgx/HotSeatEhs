@@ -135,11 +135,10 @@ let color = UIColor(named: "SillyBlue")
                 while cell.disabled{
                     rand = Int.random(in: 0...list[classIndex].seatingChart.count - 1)
                     cell = list[classIndex].seatingChart[rand]
-                    print(cell.disabled)
                 }
+                cell.backColor = "red"
             }
             runSeatCountNew += 1
-            cell.backColor = "red"
             runCollection.reloadData()
             //performSegue(withIdentifier: "SingleSeatSegue", sender: self)
         }
