@@ -35,14 +35,18 @@ class History: NSObject, Codable{
             else if groupChosen == "Row"{
                 for i in 0...list[classIndex].columnDimension - 1 {
                     let cell = list[classIndex].seatingChart[historyR+i]
-                    cell.backColor = "red"
+                    if cell.backColor != "darkGray"{
+                        cell.backColor = "red"
+                    }
+                    
                 }
             }
             else if groupChosen == "Column"{
                 for i in 0...list[classIndex].rowDimension - 1 {
                     let cell = list[classIndex].seatingChart[historyC+(list[classIndex].columnDimension*i)]
-                    print(cell.id)
-                    cell.backColor = "red"
+                    if cell.backColor != "darkGray"{
+                        cell.backColor = "red"
+                    }
                 }
             }
         }

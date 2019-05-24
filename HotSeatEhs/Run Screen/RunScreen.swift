@@ -115,7 +115,9 @@ let color = UIColor(named: "SillyBlue")
     var runGroupCountNew = 0
     func whiteOut(){
         for i in stride(from: 0, through: list[classIndex].seatingChart.count-1, by: 1){
-            list[classIndex].seatingChart[i].backColor = "white"
+            if list[classIndex].seatingChart[i].backColor != "darkGray"{
+                list[classIndex].seatingChart[i].backColor = "white"
+            }
         }
     }
     
@@ -127,7 +129,15 @@ let color = UIColor(named: "SillyBlue")
                 runSeatCountOld += 1
             }
             rand = Int.random(in: 0...list[classIndex].seatingChart.count - 1)
-            let cell = list[classIndex].seatingChart[rand]
+            var cell = list[classIndex].seatingChart[rand]
+            if cell.disabled{
+                print(cell.disabled)
+                while cell.disabled{
+                    rand = Int.random(in: 0...list[classIndex].seatingChart.count - 1)
+                    cell = list[classIndex].seatingChart[rand]
+                    print(cell.disabled)
+                }
+            }
             runSeatCountNew += 1
             cell.backColor = "red"
             runCollection.reloadData()
@@ -143,7 +153,9 @@ let color = UIColor(named: "SillyBlue")
             rowStart = list[classIndex].columnDimension * rand
             for i in 0...list[classIndex].columnDimension - 1 {
                 let cell = list[classIndex].seatingChart[rowStart+i]
-                cell.backColor = "red"
+                if cell.backColor != "darkGray"{
+                    cell.backColor = "red"
+                }
             }
             runRowCountNew += 1
             runCollection.reloadData()
@@ -161,7 +173,9 @@ let color = UIColor(named: "SillyBlue")
             for i in 0...list[classIndex].rowDimension - 1 {
                 let cell = list[classIndex].seatingChart[rand+(list[classIndex].columnDimension*i)]
                 print(cell.id)
-                cell.backColor = "red"
+                if cell.backColor != "darkGray"{
+                    cell.backColor = "red"
+                }
             }
             runCollection.reloadData()
         }
@@ -185,6 +199,11 @@ let color = UIColor(named: "SillyBlue")
             let temp = seats[i]
             seats.remove(at: i)
             seats.append(temp)
+        }
+        for i in stride(from: seats.count-1, through: 0, by: -1){
+            if seats[i].disabled{
+                seats.remove(at: i)
+            }
         }
         let seatGroups = seats.chunked(into: people)
         var holder = [String()]
@@ -247,6 +266,9 @@ let color = UIColor(named: "SillyBlue")
         }
         else if (color == UIColor.lightGray) {
             chosen = "lightGray"
+        }
+        else if (color == UIColor.darkGray) {
+            chosen = "darkGray"
         }
         else if (color == UIColor(named: "SillyBlue")) {
             chosen = "SillyBlue"
@@ -322,6 +344,9 @@ let color = UIColor(named: "SillyBlue")
         }
         else if (color == "lightGray") {
             chosen = UIColor.lightGray
+        }
+        else if (color == "darkGray") {
+            chosen = UIColor.darkGray
         }
         else if (color == "SillyBlue") {
             chosen = UIColor(named: "SillyBlue")!

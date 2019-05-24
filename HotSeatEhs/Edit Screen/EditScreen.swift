@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataSource, UITableViewDelegate {
+class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataSource, UITableViewDelegate, UICollectionViewDelegate {
     
     @IBOutlet weak var CollectionView: UICollectionView!
     @IBOutlet weak var TableView: UITableView!
@@ -76,8 +76,26 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         else{
             cell.cellID.text = s.id
         }
+        if s.disabled{
+            cell.backgroundColor = UIColor.darkGray
+        }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = CollectionView.cellForItem(at: indexPath) as? EditScreenCollectionViewCell
+        if cell?.backgroundColor != UIColor.darkGray {
+            cell?.backgroundColor = UIColor.darkGray
+            list[classIndex].seatingChart[indexPath.row].disabled = true
+            list[classIndex].seatingChart[indexPath.row].backColor = "darkGray"
+        }
+        else{
+            cell?.backgroundColor = UIColor.white
+            list[classIndex].seatingChart[indexPath.row].disabled = false
+            list[classIndex].seatingChart[indexPath.row].backColor = "white"
+        }
+        ClassArray().archive(fileName: "HomeScreen")
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -93,6 +111,7 @@ class EditScreen: UIViewController, UITableViewDataSource, UICollectionViewDataS
         //TableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.fade)
     }
 }
+
 
 
 

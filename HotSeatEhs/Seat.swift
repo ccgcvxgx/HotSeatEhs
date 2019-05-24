@@ -14,6 +14,7 @@ class Seat: NSObject, Codable {
     var studentName: String!
     var id: String!
     var backColor: String!
+    var disabled: Bool!
     
     init( _ row: Int, _ column: Int, _ color: String) {
         rowPosition = row
@@ -21,6 +22,7 @@ class Seat: NSObject, Codable {
         studentName = ""
         id = String(column) + "." + String(row)
         backColor = color
+        disabled = false
         
     }
     /*func sName() -> String {
